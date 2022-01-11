@@ -1,0 +1,110 @@
+BEGIN_FUNCTION_MAP
+	.DSO,ELW현재가,DSO343001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		ELW코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드설명, jongname, jongname, varstring, 40, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		거래대금, money, money, long, 4, 0, 0, 0, , , ;
+		전일거래량, prevvolume, prevvolume, long, 4, 0, 0, 0, , , ;
+		전일래대금, prevmoney, prevmoney, long, 4, 0, 0, 0, , , ;
+		기준가, standardjuka, standardjuka, long, 4, 0, 0, 0, , , ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , attr, ;
+		시가대비, startdebi, startdebi, long, 4, 0, 0, 0, , , ;
+		시가대비율, startdebirate, startdebirate, float, 4, 0, 0, 0, , , ;
+		스프레드, spread, spread, float, 4, 0, 0, 0, , , ;
+		고가, high, high, long, 4, 0, 0, 0, , attr, ;
+		고가대비, highdebi, highdebi, long, 4, 0, 0, 0, , , ;
+		고가대비율, highdebirate, highdebirate, float, 4, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, varstring, 5, 0, 0, 0, , , ;
+		저가, low, low, long, 4, 0, 0, 0, , attr, ;
+		저가대비, lowdebi, lowdebi, long, 4, 0, 0, 0, , , ;
+		저가대비율, lowdebirate, lowdebirate, float, 4, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, varstring, 5, 0, 0, 0, , , ;
+		최고가, highprice, highprice, long, 4, 0, 0, 0, , , ;
+		최고가대비, highpricedebi, highpricedebi, long, 4, 0, 0, 0, , , ;
+		최고가대비율, highpricedebirate, highpricedebirate, float, 4, 0, 0, 0, , , ;
+		최고일자, highpricedate, highpricedate, varstring, 5, 0, 0, 0, , , ;
+		최저가, lowprice, lowprice, long, 4, 0, 0, 0, , , ;
+		최저가대비, lowpricedebi, lowpricedebi, long, 4, 0, 0, 0, , , ;
+		최저가대비율, lowpricedebirate, lowpricedebirate, float, 4, 0, 0, 0, , , ;
+		최저일자, lowpricedate, lowpricedate, varstring, 5, 0, 0, 0, , , ;
+		환산가, excprice, excprice, float, 4, 0, 0, 0, , , ;
+		행사가, exeprice, exeprice, float, 4, 0, 0, 0, , , ;
+		최종거래일, lastdate, lastdate, varstring, 12, 0, 0, 0, , , ;
+		지급일, paydate, paydate, varstring, 12, 0, 0, 0, , , ;
+		패리티, parity, parity, float, 4, 0, 0, 0, , , ;
+		잔존일수, remainday, remainday, short, 2, 0, 0, 0, , , ;
+		기어링비율, gearing, gearing, float, 4, 0, 0, 0, , , ;
+		프리미엄, premium, premium, float, 4, 0, 0, 0, , , ;
+		자본지지점, capjiji, capjiji, float, 4, 0, 0, 0, , , ;
+		손익분기율, profitrate, profitrate, float, 4, 0, 0, 0, , , ;
+		전환비율, conrate, conrate, float, 4, 0, 0, 0, , , ;
+		가격참여율, chamrate, chamrate, float, 4, 0, 0, 0, , , ;
+		외국인증감당일, foretoday, foretoday, long, 4, 0, 0, 0, , , ;
+		외국인증감전일, forebefore, forebefore, long, 4, 0, 0, 0, , , ;
+		외국인보유율, forerate, forerate, float, 4, 0, 0, 0, , , ;
+		외국인보유량, forevol, forevol, long, 4, 0, 0, 0, , , ;
+		이론가, theoreticalprice, theoreticalprice, float, 4, 0, 0, 0, , , ;
+		이론가, theoreticalbasis, theoreticalbasis, float, 4, 0, 0, 0, , , ;
+		내재변동성, volatility, volatility, float, 4, 0, 0, 0, , , ;
+		델타, delta, delta, float, 4, 0, 0, 0, , , ;
+		기초자산코드, basecode, basecode, varstring, 12, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		매도회원사, medocomno, medocomno, varstring, 3, 0, 0, 0, , , ;
+		매도수량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수회원사, mesucomno, mesucomno, varstring, 3, 0, 0, 0, , , ;
+		매수수량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		LP - 회원번호, lp1, lp1, varstring, 3, 0, 0, 0, , , ;
+		LP - 회원번호, lp2, lp2, varstring, 3, 0, 0, 0, , , ;
+		LP - 회원번호, lp3, lp3, varstring, 3, 0, 0, 0, , , ;
+		상장주식수, cntstocks, cntstocks, long, 4, 0, 0, 0, , , ;
+		lp보유수량, lpvolume, lpvolume, long, 4, 0, 0, 0, , , ;
+		lp보유비율, lprate, lprate, float, 4, 0, 0, 0, , , ;
+		기초자산명리스트, basejongnamelist, basejongnamelist, varstring, 100, 0, 0, 0, , , ;
+		기초자산코드리스트1, basejongcodelist1, basejongcodelist1, varstring, 100, 0, 0, 0, , , ;
+		기초자산코드리스트2, basejongcodelist2, basejongcodelist2, varstring, 100, 0, 0, 0, , , ;
+		e기어링, egearing, egearing, float, 4, 0, 0, 0, , , ;
+		lp주문가능여부, lporder, lporder, varstring, 10, 0, 0, 0, , , ;
+		atm여부, atmgubun, atmgubun, varstring, 10, 0, 0, 0, , , ;
+		내재가치, in_value, in_value, float, 4, 0, 0, 0, , , ;
+		시간가치, time_value, time_value, float, 4, 0, 0, 0, , , ;
+		최고호가, maxhokajuka, maxhokajuka, long, 4, 0, 0, 0, , , ;
+		최저호가, minhokajuka, minhokajuka, long, 4, 0, 0, 0, , , ;
+		감마, gamma, gamma, float, 4, 0, 0, 0, , , ;
+		세타, theta, theta, float, 4, 0, 0, 0, , , ;
+		베가, vega, vega, float, 4, 0, 0, 0, , , ;
+		로, rho, rho, float, 4, 0, 0, 0, , , ;
+		확정지급액, conmoney, conmoney, long, 4, 0, 0, 0, , , ;
+		조기종료ELW구분, kobaelwgubun, kobaelwgubun, byte, 1, 0, 0, 0, , , ;
+		조기종료발생구분, kobaelwkogubun, kobaelwkogubun, byte, 1, 0, 0, 0, , , ;
+		조기종료행사가격, kobaelwprice, kobaelwprice, float, 4, 0, 0, 0, , , ;
+		KO접근도, kobaelwrate, kobaelwrate, float, 4, 0, 0, 0, , , ;
+		조기종료 평가시작시점, kostarttime, kostarttime, varstring, 20, 0, 0, 0, , , ;
+		조기종료 평가종료시점, koendtime, koendtime, varstring, 20, 0, 0, 0, , , ;
+		조기종료후 최고가, kobabasehigh, kobabasehigh, float, 4, 0, 0, 0, , , ;
+		조기종료후 최저가, kobabaselow, kobabaselow, float, 4, 0, 0, 0, , , ;
+		조기종료후1구간 최고가, kobabasehigh1, kobabasehigh1, float, 4, 0, 0, 0, , , ;
+		조기종료후1구간 최저가, kobabaselow1, kobabaselow1, float, 4, 0, 0, 0, , , ;
+		조기종료후2구간 최고가, kobabasehigh2, kobabasehigh2, float, 4, 0, 0, 0, , , ;
+		조기종료후2구간 최저가, kobabaselow2, kobabaselow2, float, 4, 0, 0, 0, , , ;
+		조기종료 평가완료구분, kobafinishgubun, kobafinishgubun, byte, 1, 0, 0, 0, , , ;
+		LP호가 내재변동성, lpvolatility, lpvolatility, float, 4, 0, 0, 0, , , ;
+		투자주의구분, marketwarning, marketwarning, varstring, 20, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

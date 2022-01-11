@@ -1,0 +1,37 @@
+BEGIN_FUNCTION_MAP
+	.DSO,외국인매매보유추이,DSO321003,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		업종코드, upcode, upcode, varstring, 2, 0, 0, 0, , , ;
+		장내장외구분, janggubun, janggubun, byte, 1, 0, 86, 0, , , ;
+		조회시작일자, startdate, startdate, varstring, 8, 0, 0, 0, , , ;
+		조회종료일자, enddate, enddate, varstring, 8, 0, 0, 0, , , ;
+		소트구분, orderbygb, orderbygb, byte, 1, 0, 103, 0, , , ;
+		조건검색, condition, condition, byte, 1, 0, 100, 0, , , ;
+		일자구분, daygubun, daygubun, long, 4, 0, 85, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목명, jname, jname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		누적매수량, mesuvolume, mesuvolume, long, 4, 0, 0, 0, , , ;
+		누적매도량, medovolume, medovolume, long, 4, 0, 0, 0, , , ;
+		순매수량, sunmesuvolume, sunmesuvolume, long, 4, 0, 0, 0, , , ;
+		보유율, volrate, volrate, float, 4, 0, 0, 0, , , ;
+		보유율증감, volratediff, volratediff, float, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음종목코드, conjongcode, conjongcode, varstring, 12, 0, 0, 0, , , ;
+		다음VALUE, convalue, convalue, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

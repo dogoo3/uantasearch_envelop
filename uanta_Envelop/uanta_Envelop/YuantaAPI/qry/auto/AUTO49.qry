@@ -1,0 +1,25 @@
+BEGIN_FUNCTION_MAP
+	.Feed,실시간업종현재가,AUTO49,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=ITGEN,MODDATE=20160119;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		업종코드, upcode, upcode, string, 4, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		업종코드, upcode, upcode, string, 4, 1, 0, 0, , , ;
+		시가, start, start, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		현재가, last, last, float, 4, 0, 0, 0, , , ;
+		거래량_천주, volume, volume, long, 4, 0, 0, 0, , , ;
+		거래대금_백만, money, money, long, 4, 0, 0, 0, , , ;
+		등락률, changerate, changerate, float, 4, 0, 0, 0, , , ;
+		시간_HH:MM:SS, time2, time2, string, 8, 0, 0, 0, , , ;
+		시간_HH:MM, time, time, string, 5, 0, 0, 0, , , ;
+		전일대비, change, change, float, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		직전거래량, nowvol, nowvol, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

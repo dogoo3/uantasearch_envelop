@@ -1,0 +1,70 @@
+BEGIN_FUNCTION_MAP
+	.DSO,주요해외지수,DSO701001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		더미, dummy, dummy, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		지수명, jisuname, jisuname, varstring, 30, 0, 0, 0, , , ;
+		현재지수, jisu, jisu, float, 4, 0, 0, 0, , , ;
+		대비, debi, debi, float, 4, 0, 0, 0, , , ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		거래량, amount, amount, double, 8, 0, 0, 0, , , ;
+		시간, time, time, varstring, 16, 0, 0, 0, , , ;
+		코드, jisucode, jisucode, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		지수명, jisuname, jisuname, varstring, 30, 0, 0, 0, , , ;
+		현재지수, jisu, jisu, float, 4, 0, 0, 0, , , ;
+		대비, debi, debi, float, 4, 0, 0, 0, , , ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		거래량, amount, amount, double, 8, 0, 0, 0, , , ;
+		시간, time, time, varstring, 16, 0, 0, 0, , , ;
+		코드, jisucode, jisucode, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		지수명, jisuname, jisuname, varstring, 30, 0, 0, 0, , , ;
+		현재지수, jisu, jisu, float, 4, 0, 0, 0, , , ;
+		대비, debi, debi, float, 4, 0, 0, 0, , , ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		거래량, amount, amount, double, 8, 0, 0, 0, , , ;
+		시간, time, time, varstring, 16, 0, 0, 0, , , ;
+		코드, jisucode, jisucode, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock4, OutBlock4, output, occurs;
+	begin
+		지수명, jisuname, jisuname, varstring, 30, 0, 0, 0, , , ;
+		현재지수, jisu, jisu, float, 4, 0, 0, 0, , , ;
+		대비, debi, debi, float, 4, 0, 0, 0, , , ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		거래량, amount, amount, double, 8, 0, 0, 0, , , ;
+		시간, time, time, varstring, 16, 0, 0, 0, , , ;
+		코드, jisucode, jisucode, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock5, OutBlock5, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+		시간, unitime, unitime, varstring, 55, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		지수 스크린키, scrkey, scrkey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

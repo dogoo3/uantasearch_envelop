@@ -1,0 +1,33 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외선물일자별예수금_GlobalAPI,DSO862008,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=,CREDATE=,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		계좌비밀번호, acnt_pswd, acnt_pswd, varstring, 100, 4, 0, 0, , , ;
+		통화코드, prc_crc_cd, prc_crc_cd, varstring, 3, 0, 0, 0, , , ;
+		조회일자, qry_dt, qry_dt, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		총개수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음버튼"1"일경우다음조회존재, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		조회일자, qry_dt, qry_dt, varstring, 8, 0, 0, 0, , , ;
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 0, 0, 0, , , ;
+		계좌번호, lst_acnt_no, lst_acnt_no, varstring, 14, 0, 0, 0, , , ;
+		계좌명, acnt_kor_nm, acnt_kor_nm, varstring, 100, 0, 0, 0, , , ;
+		통화코드, prc_crc_cd, prc_crc_cd, varstring, 3, 0, 0, 0, , , ;
+		수수료, bas_cmsn_amt, bas_cmsn_amt, double, 8, 0, 0, 0, , , ;
+		예탁자산평가액, frmo_deps_amt, frmo_deps_amt, double, 8, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		총개수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음조회데이터, next_data, next_data, varstring, 50, 0, 0, 0, , , ;
+		다음조회값, nextval, nextval, varstring, 100, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

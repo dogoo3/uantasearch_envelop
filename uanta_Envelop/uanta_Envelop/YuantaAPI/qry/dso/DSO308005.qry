@@ -1,0 +1,38 @@
+BEGIN_FUNCTION_MAP
+	.DSO,공략주매매시그널,DSO308005,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20180817,MODIFYER=김운용,MODDATE=20190121;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		없음, dummy, dummy, long, 4, 0, 0, 0, , , ;
+		종목코드, shtcode, shtcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음여부, next, next, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		일자, basedate, basedate, varstring, 10, 0, 0, 0, , , ;
+		시간, fighttime, fighttime, varstring, 5, 0, 0, 0, , , ;
+		종목이름, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		포착가, fightjuka, fightjuka, long, 4, 0, 0, 0, , , ;
+		매도일, selldate, selldate, varstring, 10, 0, 0, 0, , , ;
+		매도시간, selltime, selltime, varstring, 5, 0, 0, 0, , , ;
+		매도가, selljuka, selljuka, long, 4, 0, 0, 0, , , ;
+		매도유형, selltype, selltype, varstring, 5, 0, 0, 0, , , ;
+		수익률, sellrate, sellrate, float, 4, 0, 0, 0, , , ;
+		타임, timeunit, timeunit, varstring, 10, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		현재가수익률, currate, currate, float, 4, 0, 0, 0, , , ;
+		신호, signal, signal, varstring, 5, 0, 0, 0, , , ;
+		권리구분, rightgb, rightgb, varstring, 4, 0, 0, 0, , , ;
+		권리기준일, rightdt, rightdt, varstring, 10, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		일자, conddate, conddate, varstring, 8, 0, 0, 0, , , ;
+		종목코드, condcode, condcode, varstring, 12, 0, 0, 0, , , ;
+		조회, condtime, condtime, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

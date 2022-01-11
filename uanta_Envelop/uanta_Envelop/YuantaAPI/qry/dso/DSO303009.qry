@@ -1,0 +1,37 @@
+BEGIN_FUNCTION_MAP
+	.DSO,동시호가예상체결가,DSO303009,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내장외구분, janggubun, janggubun, byte, 1, 0, 86, 0, , , ;
+		업종코드, upcode, upcode, varstring, 2, 0, 0, 0, , , ;
+		상승율하락율구분, updowngubun, updowngubun, byte, 1, 0, 83, 0, , , ;
+		상승하락률범위, range, range, long, 4, 0, 78, 0, , , ;
+		이전거래량_이상, prevol, prevol, long, 4, 0, 0, 0, , , ;
+		관리종목제외구분, except, except, byte, 1, 0, 0, 0, , , ;
+		이상이하구분, updowntype, updowntype, byte, 1, 0, 77, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		종목명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		예상체결가, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		이전거래량, prevol, prevol, double, 8, 0, 0, 0, , , ;
+		예상체결량, expectvol, expectvol, double, 8, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, double, 8, 0, 0, 0, , , ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		스크린키, offset, offset, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

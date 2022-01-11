@@ -1,0 +1,16 @@
+BEGIN_FUNCTION_MAP
+	.Feed,EUREX_OPENINST,AUTO5C,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 9, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 9, 1, 0, 0, , , ;
+		padding, FILLER, FILLER, string, 3, 0, 0, 0, , , ;
+		미결제약정수량, openinterest, openinterest, long, 4, 0, 0, 0, , , ;
+		미결제약정전일대비수량, opendebi, opendebi, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

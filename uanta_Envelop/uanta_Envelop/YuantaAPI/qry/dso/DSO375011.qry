@@ -1,0 +1,42 @@
+BEGIN_FUNCTION_MAP
+	.DSO,CME상품선물현재가,DSO375011,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		CME선물코드, code, code, varstring, 5, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드설명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, last, last, float, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		기준가, standardprice, standardprice, float, 4, 0, 0, 0, , , ;
+		매도호가, medoprice, medoprice, float, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuprice, mesuprice, float, 4, 0, 0, 0, , attr, ;
+		시가, start, start, float, 4, 0, 0, 0, , attr, ;
+		시가대비, startdebi, startdebi, float, 4, 0, 0, 0, , attr, ;
+		고가, high, high, float, 4, 0, 0, 0, , attr, ;
+		고가대비, highdebi, highdebi, float, 4, 0, 0, 0, , attr, ;
+		고가시간, hightime, hightime, varstring, 5, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , attr, ;
+		저가대비, lowdebi, lowdebi, float, 4, 0, 0, 0, , attr, ;
+		저가시간, lowtime, lowtime, varstring, 5, 0, 0, 0, , , ;
+		상한가, maxprice, maxprice, float, 4, 0, 0, 0, , attr, ;
+		하한가, minprice, minprice, float, 4, 0, 0, 0, , attr, ;
+		코스피, kospi, kospi, float, 4, 0, 0, 0, , , ;
+		전일대비, kospidebi, kospidebi, float, 4, 0, 0, 0, , attr, ;
+		코스피등락, kospirate, kospirate, float, 4, 0, 0, 0, , , ;
+		시장베이시스, basism, basism, float, 4, 0, 0, 0, , , ;
+		약정수량, volume, volume, long, 4, 0, 0, 0, , , ;
+		약정대금(백만), money, money, long, 4, 0, 0, 0, , , ;
+		미결제약정, openinterest, openinterest, long, 4, 0, 0, 0, , , ;
+		전일약정수량, prevvolume, prevvolume, long, 4, 0, 0, 0, , , ;
+		잔일약정대금, prevmoney, prevmoney, long, 4, 0, 0, 0, , , ;
+		전일미결제약정대비, opendebi, opendebi, long, 4, 0, 0, 0, , , ;
+		거래개시일, opendate, opendate, varstring, 10, 0, 0, 0, , , ;
+		최종거래일, lastdate, lastdate, varstring, 10, 0, 0, 0, , , ;
+		잔존일수, remainday, remainday, varstring, 12, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

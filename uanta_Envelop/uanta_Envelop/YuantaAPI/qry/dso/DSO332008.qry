@@ -1,0 +1,31 @@
+BEGIN_FUNCTION_MAP
+	.DSO,VI단일가종목,DSO332008,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		vi구분, vi_gubun, vi_gubun, long, 4, 0, 68, 0, , , ;
+		코드, jongcode, jongcode, varstring, 6, 0, 69, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음조회, next, next, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		종가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, rate, rate, float, 4, 0, 0, 0, , , ;
+		VI발동가격, vi_price, vi_price, long, 4, 0, 0, 0, , , ;
+		VI괴리율, vi_grate, vi_grate, float, 4, 0, 0, 0, , , ;
+		발동시간, time_in, time_in, varstring, 8, 0, 0, 0, , , ;
+		해제시간, time_out, time_out, varstring, 8, 0, 0, 0, , , ;
+		기준가, standardjuka, standardjuka, long, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		발동시간, lasttime, lasttime, long, 4, 0, 0, 0, , , ;
+		종목코드, lastjong, lastjong, varstring, 6, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

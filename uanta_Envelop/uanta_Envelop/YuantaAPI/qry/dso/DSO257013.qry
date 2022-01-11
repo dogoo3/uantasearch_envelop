@@ -1,0 +1,44 @@
+BEGIN_FUNCTION_MAP
+	.DSO,CME선물매매손익,DSO257013,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151210,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		계좌비밀번호, passwd, passwd, varstring, 100, 4, 0, 0, , , ;
+		조회일자, date, date, varstring, 8, 0, 0, 0, , , ;
+		조회구분, qry_tp, qry_tp, byte, 1, 0, 108, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		총조회건수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		시장구분, jang_gubun, jang_gubun, byte, 1, 0, 0, 0, , , ;
+		약정수량합계, sum_trd_qty, sum_trd_qty, double, 8, 0, 0, 0, , , ;
+		약정금액합계, sum_trd_amt, sum_trd_amt, double, 8, 0, 0, 0, , , ;
+		수수료합계, sum_cmsn, sum_cmsn, double, 8, 0, 0, 0, , , ;
+		매매손익합계, sum_trd_pl, sum_trd_pl, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목코드, jong_code, jong_code, varstring, 8, 0, 0, 0, , , ;
+		종목명, jong_name, jong_name, varstring, 50, 0, 0, 0, , , ;
+		매도수량/매수수량, sell_qty, sell_qty, double, 8, 0, 0, 0, , , ;
+		매도금액/매수금액, sell_amt, sell_amt, double, 8, 0, 0, 0, , , ;
+		약정수량, trd_qty, trd_qty, double, 8, 0, 0, 0, , , ;
+		약정금액, trd_amt, trd_amt, double, 8, 0, 0, 0, , , ;
+		수수료, cmsn, cmsn, double, 8, 0, 0, 0, , , ;
+		매매손익, trd_pl, trd_pl, double, 8, 0, 0, 0, , , ;
+		빈칸, dummy1, dummy1, varstring, 1, 0, 0, 0, , , ;
+		빈칸, dummy2, dummy2, varstring, 1, 0, 0, 0, , , ;
+		매수수량, buy_qty, buy_qty, double, 8, 0, 0, 0, , , ;
+		매수금액, buy_amt, buy_amt, double, 8, 0, 0, 0, , , ;
+		빈칸, dummy3, dummy3, varstring, 1, 0, 0, 0, , , ;
+		빈칸, dummy4, dummy4, varstring, 1, 0, 0, 0, , , ;
+		빈칸, dummy5, dummy5, varstring, 1, 0, 0, 0, , , ;
+		빈칸, dummy6, dummy6, varstring, 1, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		다음여부, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -1,0 +1,17 @@
+BEGIN_FUNCTION_MAP
+	.DSO,API시세조회1,DSO313001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20190219,MODIFYER=김운용,MODDATE=20190219;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내외구분, jang, jang, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		전일고가, prevhigh, prevhigh, long, 4, 0, 0, 0, , , ;
+		전전일종가, prev2last, prev2last, long, 4, 0, 0, 0, , , ;
+		3일거래대금평균, avgmoney, avgmoney, double, 8, 0, 0, 0, , , ;
+		체결강도, chegyulrate, chegyulrate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

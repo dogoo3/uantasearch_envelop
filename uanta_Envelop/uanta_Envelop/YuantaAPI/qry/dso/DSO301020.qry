@@ -1,0 +1,33 @@
+BEGIN_FUNCTION_MAP
+	.DSO,시간대별체결량_MAX,DSO301020,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		장구분, janggubun, janggubun, byte, 1, 0, 1, 0, , , ;
+		분봉구분, mingubun, mingubun, byte, 1, 0, 22, 0, , , ;
+		기준시각, contime, contime, long, 4, 0, 0, 0, , , ;
+		체결량, nowvolume, nowvolume, long, 4, 0, 0, 0, , , ;
+		체결구분, nowvoltype, nowvoltype, long, 4, 0, 23, 0, , , ;
+		당일전일구분, daygubun, daygubun, byte, 1, 0, 24, 0, , , ;
+		정렬구분, sortgubun, sortgubun, byte, 1, 0, 25, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+		체결강도, chegyulrate, chegyulrate, float, 4, 0, 0, 0, , , ;
+		대비율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회시간, searchtime, searchtime, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

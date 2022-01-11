@@ -1,0 +1,42 @@
+BEGIN_FUNCTION_MAP
+	.DSO,재무순위정보,DSO334001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내장외구분, janggubun, janggubun, byte, 1, 0, 97, 0, , , ;
+		정렬기준, gubun, gubun, byte, 1, 0, 99, 0, , , ;
+		정렬기준2, gubun2, gubun2, byte, 1, 0, 98, 0, , , ;
+		호출화면구분, formgubun, formgubun, long, 4, 0, 3, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		순위, seq, seq, long, 4, 0, 0, 0, , , ;
+		종목명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		매출액증률, saleadd, saleadd, float, 4, 0, 0, 0, , , ;
+		ROA, roa, roa, float, 4, 0, 0, 0, , , ;
+		ROE, roe, roe, float, 4, 0, 0, 0, , , ;
+		부채비율, debt, debt, float, 4, 0, 0, 0, , , ;
+		유보율, spls, spls, float, 4, 0, 0, 0, , , ;
+		EPS, eps, eps, float, 4, 0, 0, 0, , , ;
+		BPS, bps, bps, float, 4, 0, 0, 0, , , ;
+		SPS, sps, sps, float, 4, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		PBR, pbr, pbr, float, 4, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		대주수량, loanvol, loanvol, long, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음순위, seq, seq, long, 4, 0, 0, 0, , , ;
+		다음종목코드, shtcode, shtcode, varstring, 12, 0, 0, 0, , , ;
+		다음조회, gubunrate, gubunrate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

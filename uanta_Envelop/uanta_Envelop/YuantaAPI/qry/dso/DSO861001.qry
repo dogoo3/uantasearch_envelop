@@ -1,0 +1,51 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외선물_계좌별보유평가조회,DSO861001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=    유창재,CREDATE=    2016,MODIFYER=유창재,MODDATE=20170125;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		계좌비밀번호, acnt_pswd, acnt_pswd, varstring, 100, 4, 0, 0, , , ;
+		조회구분0:계좌별1:그룹별조회, qry_tp, qry_tp, long, 4, 0, 37, 0, , , ;
+		그룹(그룹별조회인경우사용), acnt_grp_nm, acnt_grp_nm, varstring, 20, 0, 0, 0, , , ;
+		선물옵션구분%:전체F:선물O:옵션, ftop_tp, ftop_tp, varstring, 1, 0, 38, 0, , , ;
+		매매구분%:전체S:매도B:매수, sb_tp, sb_tp, varstring, 1, 0, 39, 0, , , ;
+		조회일(없으면당일), qry_dt, qry_dt, varstring, 8, 0, 0, 0, , , ;
+		사용자ID그룹별조회인경우사용, usr_id, usr_id, varstring, 20, 0, 0, 0, , , ;
+		종목코드%:전체, stk_cd, stk_cd, varstring, 32, 0, 40, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		총개수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음버튼"1"일경우다음조회존재, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 0, 0, 0, , , ;
+		계좌번호, lst_acnt_no, lst_acnt_no, varstring, 14, 0, 0, 0, , , ;
+		계좌명, acnt_kor_nm, acnt_kor_nm, varstring, 100, 0, 0, 0, , , ;
+		종목, stk_cd, stk_cd, varstring, 32, 0, 0, 0, , , ;
+		종목명, stk_nm, stk_nm, varstring, 100, 0, 0, 0, , , ;
+		매매구분, sb_tp_cd, sb_tp_cd, varstring, 30, 0, 0, 0, , , ;
+		평균체결가, avg_mth_prc, avg_mth_prc, double, 8, 0, 0, 0, , , ;
+		미결제수량, opst_qty, opst_qty, double, 8, 0, 0, 0, , , ;
+		청산가능수량, clrn_psb_qty, clrn_psb_qty, double, 8, 0, 0, 0, , , ;
+		현재가, crprc, crprc, double, 8, 0, 0, 0, , , ;
+		선물평가손익, fut_eval_pl, fut_eval_pl, double, 8, 0, 0, 0, , , ;
+		옵션평가손익, opt_eval_pl, opt_eval_pl, double, 8, 0, 0, 0, , , ;
+		옵션평가금액, opt_eval_amt, opt_eval_amt, double, 8, 0, 0, 0, , , ;
+		수익률, gnrt, gnrt, double, 8, 0, 0, 0, , , ;
+		통화코드, crc_cd, crc_cd, varstring, 3, 0, 0, 0, , , ;
+		행사예약수량, exci_rsrv_qty, exci_rsrv_qty, double, 8, 0, 0, 0, , , ;
+		행사신청수량, exci_req_qty, exci_req_qty, double, 8, 0, 0, 0, , , ;
+		최초통보일, fnd_dt, fnd_dt, varstring, 8, 0, 0, 0, , , ;
+		기준일자, std_dt, std_dt, varstring, 8, 0, 0, 0, , , ;
+		미체결수량, nmth_qty, nmth_qty, double, 8, 0, 0, 0, , , ;
+		선물옵션구분, futr_tp, futr_tp, varstring, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		총개수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음조회값, nextval, nextval, varstring, 100, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

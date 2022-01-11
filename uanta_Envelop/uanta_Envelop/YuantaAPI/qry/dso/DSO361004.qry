@@ -1,0 +1,71 @@
+BEGIN_FUNCTION_MAP
+	.DSO,옵션복합시세_CALL-PUT,DSO361004,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		구분, janggubun, janggubun, byte, 1, 0, 3, 0, , , ;
+		월, month, month, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		지수, last, last, float, 4, 0, 0, 0, , , ;
+		대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		시가, start, start, float, 4, 0, 0, 0, , , ;
+		고가, high, high, float, 4, 0, 0, 0, , , ;
+		저가, low, low, float, 4, 0, 0, 0, , , ;
+		잔존일수, remainday, remainday, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		C약정, cvolume, cvolume, long, 4, 0, 0, 0, , , ;
+		C미결제, copeninterest, copeninterest, long, 4, 0, 0, 0, , , ;
+		C매수잔, cmesuvol, cmesuvol, long, 4, 0, 0, 0, , , ;
+		C매수호, cmesuprice, cmesuprice, float, 4, 0, 0, 0, , , ;
+		C매도잔, cmedovol, cmedovol, long, 4, 0, 0, 0, , , ;
+		C매도호, cmedoprice, cmedoprice, float, 4, 0, 0, 0, , , ;
+		C등락률, cdebirate, cdebirate, float, 4, 0, 0, 0, , , ;
+		C대비, cdebi, cdebi, float, 4, 0, 0, 0, , attr, ;
+		C예상가, cexpect, cexpect, float, 4, 0, 0, 0, , , ;
+		C현재가, clast, clast, float, 4, 0, 0, 0, , , ;
+		C시가, cstart, cstart, float, 4, 0, 0, 0, , , ;
+		C고가, chigh, chigh, float, 4, 0, 0, 0, , , ;
+		C저가, clow, clow, float, 4, 0, 0, 0, , , ;
+		행사가, jongprice, jongprice, float, 4, 0, 0, 0, , , ;
+		지수환산, jongsisu, jongsisu, float, 4, 0, 0, 0, , , ;
+		P현재가, plast, plast, float, 4, 0, 0, 0, , , ;
+		P예상가, pexpect, pexpect, float, 4, 0, 0, 0, , , ;
+		P시가, pstart, pstart, float, 4, 0, 0, 0, , , ;
+		P고가, phigh, phigh, float, 4, 0, 0, 0, , , ;
+		P저가, plow, plow, float, 4, 0, 0, 0, , , ;
+		P대비, pdebi, pdebi, float, 4, 0, 0, 0, , attr, ;
+		P등락률, pdebirate, pdebirate, float, 4, 0, 0, 0, , , ;
+		P매도호, pmedoprice, pmedoprice, float, 4, 0, 0, 0, , , ;
+		P매도잔, pmedovol, pmedovol, long, 4, 0, 0, 0, , , ;
+		P매수호, pmesuprice, pmesuprice, float, 4, 0, 0, 0, , , ;
+		P매수잔, pmesuvol, pmesuvol, long, 4, 0, 0, 0, , , ;
+		P미결제, popeninterest, popeninterest, long, 4, 0, 0, 0, , , ;
+		P약정, pvolume, pvolume, long, 4, 0, 0, 0, , , ;
+		C코드, ccode, ccode, varstring, 10, 0, 0, 0, , , ;
+		P코드, pcode, pcode, varstring, 10, 0, 0, 0, , , ;
+		ATM여부, atmflag, atmflag, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		다음, next, next, byte, 1, 0, 0, 0, , , ;
+		선물지수, flast, flast, float, 4, 0, 0, 0, , attr, ;
+		선물대비, fdebi, fdebi, float, 4, 0, 0, 0, , attr, ;
+		선물등락율, fdebirate, fdebirate, float, 4, 0, 0, 0, , , ;
+		선물거래량, fvolume, fvolume, long, 4, 0, 0, 0, , , ;
+		선물시가, fstart, fstart, float, 4, 0, 0, 0, , attr, ;
+		선물고가, fhigh, fhigh, float, 4, 0, 0, 0, , attr, ;
+		선물저가, flow, flow, float, 4, 0, 0, 0, , attr, ;
+		선물잔존일수, fremainday, fremainday, varstring, 6, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		키, scrkey, scrkey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

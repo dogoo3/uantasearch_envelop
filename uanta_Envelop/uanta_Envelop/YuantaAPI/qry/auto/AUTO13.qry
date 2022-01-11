@@ -1,0 +1,35 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HYUN_TS_SISE,AUTO13,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 1, 0, 0, , , ;
+		4bytes맞추기위해, garbage, garbage, string, 2, 0, 0, 0, , , ;
+		시간, time, time, string, 5, 0, 0, 0, , , ;
+		4bytes맞추기위해, FILLER, FILLER, string, 3, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs=5;
+	begin
+		매도거래원번호, medocomno, medocomno, string, 4, 0, 0, 0, , , ;
+		총매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매도체결량, medonowvol, medonowvol, long, 4, 0, 0, 0, , , ;
+		총매도금액, medomoney, medomoney, long, 4, 0, 0, 0, , , ;
+		매도체결금액, medonowmoney, medonowmoney, long, 4, 0, 0, 0, , , ;
+		평균매도금액, avgmedoprice, avgmedoprice, long, 4, 0, 0, 0, , , ;
+		이전순위, medobefseq, medobefseq, short, 2, 0, 0, 0, , , ;
+		공간, filler1, filler1, short, 2, 0, 0, 0, , , ;
+		매수거래원번호, mesucomno, mesucomno, string, 4, 0, 0, 0, , , ;
+		총매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		매수체결량, mesunowvol, mesunowvol, long, 4, 0, 0, 0, , , ;
+		총매수금액, mesumoney, mesumoney, long, 4, 0, 0, 0, , , ;
+		매수체결금액, mesunowmoney, mesunowmoney, long, 4, 0, 0, 0, , , ;
+		평균매수금액, avgmesuprice, avgmesuprice, long, 4, 0, 0, 0, , , ;
+		이전순위, mesubefseq, mesubefseq, short, 2, 0, 0, 0, , , ;
+		공간, filler2, filler2, short, 2, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

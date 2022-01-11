@@ -1,0 +1,47 @@
+BEGIN_FUNCTION_MAP
+	.DSO,EUREX옵션거래내역,DSO258012,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		계좌비밀번호, passwd, passwd, varstring, 100, 4, 0, 0, , , ;
+		조회시작일, date, date, varstring, 8, 0, 0, 0, , , ;
+		조회구분, qry_tp, qry_tp, byte, 1, 0, 110, 0, , , ;
+		조회시작일, end_date, end_date, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		총조회건수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		입금총액, in_amt, in_amt, double, 8, 0, 0, 0, , , ;
+		출금총액, out_amt, out_amt, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		거래일자, date, date, varstring, 10, 0, 0, 0, , , ;
+		매매구분, sell_buy_tp, sell_buy_tp, varstring, 4, 0, 0, 0, , , ;
+		종목코드, jong_code, jong_code, varstring, 12, 0, 0, 0, , , ;
+		수량, qty, qty, double, 8, 0, 0, 0, , , ;
+		거래금액, amt, amt, double, 8, 0, 0, 0, , , ;
+		수수료, cmsn, cmsn, double, 8, 0, 0, 0, , , ;
+		미수변제, rpy_amt, rpy_amt, double, 8, 0, 0, 0, , , ;
+		적요명, name, name, varstring, 40, 0, 0, 0, , , ;
+		거래순번, trade_no, trade_no, double, 8, 0, 0, 0, , , ;
+		종목명, jong_name, jong_name, varstring, 20, 0, 0, 0, , , ;
+		단가, price, price, varstring, 15, 0, 0, 0, , , ;
+		정산금액, after_amt, after_amt, double, 8, 0, 0, 0, , , ;
+		제세금, tax, tax, double, 8, 0, 0, 0, , , ;
+		예수잔고, dpo, dpo, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		총갯수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음조회일, date, date, varstring, 8, 0, 0, 0, , , ;
+		다음거래번호, ord_no, ord_no, varstring, 6, 0, 0, 0, , , ;
+		페이지, page, page, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

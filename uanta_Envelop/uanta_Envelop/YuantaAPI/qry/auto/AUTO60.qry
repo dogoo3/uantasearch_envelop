@@ -1,0 +1,23 @@
+BEGIN_FUNCTION_MAP
+	.Feed,WORLD_SISE,AUTO60,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=김운용,MODDATE=20161214;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 10, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 10, 1, 0, 0, , , ;
+		일자, basedate, basedate, string, 10, 0, 0, 0, , , ;
+		시간, time, time, string, 5, 0, 0, 0, , , ;
+		4bytes맞추기위해, FILLER, FILLER, string, 3, 0, 0, 0, , , ;
+		현재가, curprice, curprice, float, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , , ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		시가, startprice, startprice, float, 4, 0, 0, 0, , , ;
+		고가, highprice, highprice, float, 4, 0, 0, 0, , , ;
+		저가, lowprice, lowprice, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

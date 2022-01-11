@@ -1,0 +1,34 @@
+BEGIN_FUNCTION_MAP
+	.DSO,신시황종합정보,DSO710001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		화면구분코드, trgubun, trgubun, byte, 1, 0, 3, 0, , , ;
+		시작일자, date, date, varstring, 8, 0, 118, 0, , , ;
+		시작시간, time, time, varstring, 6, 0, 119, 0, , , ;
+		검색종목코드, jongcode, jongcode, varstring, 6, 0, 69, 0, , , ;
+		소분류코드, subgubun, subgubun, long, 4, 0, 120, 0, , , ;
+		검색구분, searchflag, searchflag, byte, 1, 0, 3, 0, , , ;
+		검색key, searchkey, searchkey, varstring, 512, 0, 0, 0, , , ;
+		검색제외Key, keyexception, keyexception, varstring, 512, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		일자, date, date, varstring, 10, 0, 0, 0, , , ;
+		시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		제목, title, title, varstring, 70, 0, 0, 0, , , ;
+		제공처, supply, supply, varstring, 20, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		시황종류코드, shkind, shkind, varstring, 2, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음Key일자(스크린키동일), nextdate, nextdate, long, 4, 0, 0, 0, , , ;
+		다음Key시간(스크린키동일), nexttime, nexttime, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

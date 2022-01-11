@@ -1,0 +1,72 @@
+BEGIN_FUNCTION_MAP
+	.DSO,티레이더Finder_Quant,DSO336203,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20180709,MODIFYER=김운용,MODDATE=20190116;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		조건개수, condnum, condnum, long, 4, 0, 0, 0, , , ;
+		조건, conds, conds, varstring, 300, 0, 0, 0, , , ;
+		분기전년구분, gubunym, gubunym, long, 4, 0, 0, 0, , , ;
+		필터여부, isfilter, isfilter, long, 4, 0, 0, 0, , , ;
+		현재가체크여부, curjuka_ck, curjuka_ck, long, 4, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		현재가구분, curjuka_cb, curjuka_cb, long, 4, 0, 0, 0, , , ;
+		거래량체크여부, volume_ck, volume_ck, long, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		거래량구분, volume_cb, volume_cb, long, 4, 0, 0, 0, , , ;
+		거래대금체크여부, money_ck, money_ck, long, 4, 0, 0, 0, , , ;
+		거래대금체크여부, money_gb, money_gb, long, 4, 0, 0, 0, , , ;
+		거래대금, money, money, long, 4, 0, 0, 0, , , ;
+		거래대금구분, money_cb, money_cb, long, 4, 0, 0, 0, , , ;
+		등락율체크여부, rate_ck, rate_ck, long, 4, 0, 0, 0, , , ;
+		등락율, rate, rate, long, 4, 0, 0, 0, , , ;
+		등락율구분, rate_cb, rate_cb, long, 4, 0, 0, 0, , , ;
+		조건체크여부, choice_ck, choice_ck, long, 4, 0, 0, 0, , , ;
+		조건구분, choice, choice, long, 4, 0, 0, 0, , , ;
+		관리종목제외, except1, except1, long, 4, 0, 0, 0, , , ;
+		우선주제외, except2, except2, long, 4, 0, 0, 0, , , ;
+		감리종목제외, except3, except3, long, 4, 0, 0, 0, , , ;
+		투자유의종목제외, except4, except4, long, 4, 0, 0, 0, , , ;
+		ETF종목제외, except5, except5, long, 4, 0, 0, 0, , , ;
+		ETN종목제외, except6, except6, long, 4, 0, 0, 0, , , ;
+		햇빛신호만, trend1, trend1, long, 4, 0, 0, 0, , , ;
+		안개신호만, trend2, trend2, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음여부, next, next, long, 4, 0, 0, 0, , , ;
+		누적조회건수, querytime, querytime, varstring, 50, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목이름, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		등락율, rate, rate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		시가총액, sichong, sichong, double, 8, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		PBR, pbr, pbr, float, 4, 0, 0, 0, , , ;
+		매출액증가율, salesaddrate, salesaddrate, float, 4, 0, 0, 0, , , ;
+		영업이익증가율, sprofitaddrate, sprofitaddrate, float, 4, 0, 0, 0, , , ;
+		EPS증가율, epsaddrate, epsaddrate, float, 4, 0, 0, 0, , , ;
+		영업이익률, sprofitrate, sprofitrate, float, 4, 0, 0, 0, , , ;
+		roe, roe, roe, float, 4, 0, 0, 0, , , ;
+		roa, roa, roa, float, 4, 0, 0, 0, , , ;
+		배당수익률, dividendrate, dividendrate, float, 4, 0, 0, 0, , , ;
+		유동비율, currentratio, currentratio, float, 4, 0, 0, 0, , , ;
+		부채비율, debtrate, debtrate, float, 4, 0, 0, 0, , , ;
+		영업이익흑자전환 전년동기, sprofitsurplus, sprofitsurplus, float, 4, 0, 0, 0, , , ;
+		순이익흑자전환 전년동기, pprofitsurplus, pprofitsurplus, float, 4, 0, 0, 0, , , ;
+		순차입금비율, puredeptrate, puredeptrate, float, 4, 0, 0, 0, , , ;
+		이자보상배율, interestrate, interestrate, float, 4, 0, 0, 0, , , ;
+		시가, start, start, long, 4, 0, 0, 0, , , ;
+		고가, high, high, long, 4, 0, 0, 0, , , ;
+		저가, low, low, long, 4, 0, 0, 0, , , ;
+		기준가, std, std, long, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음종목, nextcode, nextcode, varstring, 40, 0, 0, 0, , , ;
+		누적조회건수, count, count, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

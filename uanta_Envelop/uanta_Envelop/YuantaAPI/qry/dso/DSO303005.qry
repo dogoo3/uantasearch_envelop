@@ -1,0 +1,32 @@
+BEGIN_FUNCTION_MAP
+	.DSO,자본금규모별시세,DSO303005,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		업종코드, upcode, upcode, varstring, 2, 0, 0, 0, , , ;
+		장내장외구분, janggubun, janggubun, byte, 1, 0, 86, 0, , , ;
+		자본금규모, capsize, capsize, byte, 1, 0, 105, 0, , , ;
+		조건검색, condition, condition, byte, 1, 0, 100, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목명, jname, jname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		자본금, capmoney, capmoney, long, 4, 0, 0, 0, , , ;
+		시가총액, sika, sika, double, 8, 0, 0, 0, , , ;
+		상장주식수, cntstocks, cntstocks, double, 8, 0, 0, 0, , , ;
+		액면가, facejuka, facejuka, long, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		스크린키, scrkey, scrkey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -1,0 +1,64 @@
+BEGIN_FUNCTION_MAP
+	.DSO,주가상승하락률상위_NEW,DSO315016,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내장외구분, janggubun, janggubun, byte, 1, 0, 86, 0, , , ;
+		업종코드, upcode, upcode, varstring, 2, 0, 0, 0, , , ;
+		상승하락구분, updowngubun, updowngubun, byte, 1, 0, 83, 0, , , ;
+		범위, range, range, long, 4, 0, 84, 0, , , ;
+		일자, basedate, basedate, varstring, 8, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		현재가구분, curjuka_cb, curjuka_cb, long, 4, 0, 80, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		거래량구분, volume_cb, volume_cb, long, 4, 0, 80, 0, , , ;
+		등락율, rate, rate, long, 4, 0, 0, 0, , , ;
+		등락율구분, rate_cb, rate_cb, long, 4, 0, 80, 0, , , ;
+		조건구분, choice, choice, long, 4, 0, 0, 0, , , ;
+		관리종목제외, except1, except1, long, 4, 0, 82, 0, , , ;
+		우선주제외, except2, except2, long, 4, 0, 82, 0, , , ;
+		시장경보종목제외, except3, except3, long, 4, 0, 82, 0, , , ;
+		투자유의종목제외, except4, except4, long, 4, 0, 82, 0, , , ;
+		ETF종목제외, except5, except5, long, 4, 0, 82, 0, , , ;
+		ETN종목제외, except6, except6, long, 4, 0, 82, 0, , , ;
+		종료일자, enddate, enddate, varstring, 8, 0, 0, 0, , , ;
+		일자구분, daygubun, daygubun, long, 4, 0, 85, 0, , , ;
+		상승하락률범위, updownvalue, updownvalue, long, 4, 0, 0, 0, , , ;
+		이상이하구분, updowntype, updowntype, long, 4, 0, 79, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		종목명, jname, jname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		(전)거래량, prevvolume, prevvolume, double, 8, 0, 0, 0, , , ;
+		(전)종가, prevjuka, prevjuka, long, 4, 0, 0, 0, , , ;
+		(전)종가대비등락율, rate, rate, float, 4, 0, 0, 0, , , ;
+		(전)종가대비, interval, interval, long, 4, 0, 0, 0, , , ;
+		250일최고가, yearhighjuka, yearhighjuka, long, 4, 0, 0, 0, , , ;
+		250일최저가, yearlowjuka, yearlowjuka, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , , ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , , ;		
+		tickcnt, tickcnt, tickcnt, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;		
+		event, event, event, varstring, 2, 0, 0, 0, , , ;
+		ki, ki, ki, long, 4, 0, 0, 0, , , ;
+		외국인, fore, fore, long, 4, 0, 0, 0, , , ;
+		프로그램, progsunmesu, progsunmesu, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+		다음시작일자, date1, date1, varstring, 10, 0, 0, 0, , , ;
+		다음종료일자, date2, date2, varstring, 10, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음종목코드, shtcode, shtcode, varstring, 12, 0, 0, 0, , , ;
+		다음등락율, conrate, conrate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

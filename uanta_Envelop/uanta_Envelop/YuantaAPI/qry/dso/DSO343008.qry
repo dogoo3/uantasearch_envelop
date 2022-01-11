@@ -1,0 +1,79 @@
+BEGIN_FUNCTION_MAP
+	.DSO,ELW현재가_PRICETABLE,DSO343008,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		ELW코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드설명, jongname, jongname, varstring, 40, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		기준가, standardjuka, standardjuka, long, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , attr, ;
+		고가, high, high, long, 4, 0, 0, 0, , attr, ;
+		저가, low, low, long, 4, 0, 0, 0, , attr, ;
+		최고가, highprice, highprice, long, 4, 0, 0, 0, , , ;
+		최고일자, highpricedate, highpricedate, varstring, 5, 0, 0, 0, , , ;
+		최저가, lowprice, lowprice, long, 4, 0, 0, 0, , , ;
+		최저일자, lowpricedate, lowpricedate, varstring, 5, 0, 0, 0, , , ;
+		행사가, exeprice, exeprice, float, 4, 0, 0, 0, , , ;
+		최종거래일, lastdate, lastdate, varstring, 12, 0, 0, 0, , , ;
+		지급일, paydate, paydate, varstring, 12, 0, 0, 0, , , ;
+		패리티, parity, parity, float, 4, 0, 0, 0, , , ;
+		잔존일수, remainday, remainday, short, 2, 0, 0, 0, , , ;
+		손익분기율, profitrate, profitrate, float, 4, 0, 0, 0, , , ;
+		전환비율, conrate, conrate, float, 4, 0, 0, 0, , , ;
+		이론가, theoreticalprice, theoreticalprice, float, 4, 0, 0, 0, , , ;
+		내재변동성, volatility, volatility, float, 4, 0, 0, 0, , , ;
+		델타, delta, delta, float, 4, 0, 0, 0, , , ;
+		기초자산코드, basecode, basecode, varstring, 12, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		매도회원사, medocomno, medocomno, varstring, 3, 0, 0, 0, , , ;
+		매도수량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수회원사, mesucomno, mesucomno, varstring, 3, 0, 0, 0, , , ;
+		매수수량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		lp보유비율, lprate, lprate, float, 4, 0, 0, 0, , , ;
+		e기어링, egearing, egearing, float, 4, 0, 0, 0, , , ;
+		lp주문가능여부, lporder, lporder, varstring, 10, 0, 0, 0, , , ;
+		감마, gamma, gamma, float, 4, 0, 0, 0, , , ;
+		세타, theta, theta, float, 4, 0, 0, 0, , , ;
+		베가, vega, vega, float, 4, 0, 0, 0, , , ;
+		로, rho, rho, float, 4, 0, 0, 0, , , ;
+	end
+	OutBlock4, OutBlock4, output, occurs;
+	begin
+		체결시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+	end
+	OutBlock5, OutBlock5, output, occurs;
+	begin
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		lp매도잔량, lpmedovol, lpmedovol, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		lp 매수잔량, lpmesuvol, lpmesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock6, OutBlock6, output;
+	begin
+		매도총잔량, medotot, medotot, long, 4, 0, 0, 0, , , ;
+		매수총잔량, mesutot, mesutot, long, 4, 0, 0, 0, , , ;
+		시간외매도총잔량, medototto, medototto, long, 4, 0, 0, 0, , , ;
+		시간외매수총잔량, mesutotto, mesutotto, long, 4, 0, 0, 0, , , ;
+		예상체결가, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		예상체결량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		호가시간, hokatime, hokatime, varstring, 8, 0, 0, 0, , , ;
+		종목유형, jongtype, jongtype, short, 2, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

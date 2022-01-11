@@ -1,0 +1,35 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외옵션_일봉,DSO822001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=이예임,CREDATE=20161209,MODIFYER=이예임,MODDATE=20161209;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 32, 0, 0, 0, , , ;
+		조회시작일, startdate, startdate, long, 4, 0, 0, 0, , , ;
+		조회종료일, enddate, enddate, long, 4, 0, 0, 0, , , ;
+		조회수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		소수점크기, pointsize, pointsize, long, 4, 0, 0, 0, , , ;
+		표시진법, dispscale, dispscale, long, 4, 0, 0, 0, , , ;
+	end
+	MSG, MSG, output, occurs;
+	begin
+		일자, basedate, basedate, long, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, double, 8, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, double, 8, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, double, 8, 0, 0, 0, , , ;
+		종가, lastjuka, lastjuka, double, 8, 0, 0, 0, , , ;
+		대비, diff_prc, diff_prc, double, 8, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		, condate, condate, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP
