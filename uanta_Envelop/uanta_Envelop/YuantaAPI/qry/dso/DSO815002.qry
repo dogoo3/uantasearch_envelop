@@ -3,7 +3,7 @@ BEGIN_FUNCTION_MAP
 	BEGIN_DATA_MAP
 	InBlock1, InBlock1, input;
 	begin
-		秦寇可记内靛, code, code, varstring, 32, 0, 0, 0, , , ;
+		秦寇可记内靛, code, code, varstring, 32, 9, 0, 0, , , ;
 	end
 	HOKALIST, HOKALIST, output, occurs;
 	begin

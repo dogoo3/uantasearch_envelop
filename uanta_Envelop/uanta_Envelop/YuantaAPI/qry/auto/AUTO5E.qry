@@ -1,0 +1,37 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HYFUN_SISE,AUTO5E,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=박성환,MODDATE=20190611;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 9, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 9, 1, 0, 0, , , ;
+		4byte맞추기위해, garbage, garbage, string, 3, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , attr, ;
+		고가, highjuka, highjuka, long, 4, 0, 0, 0, , attr, ;
+		저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , attr, ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER1, FILLER1, string, 2, 0, 0, 0, , , ;
+		누적거래량_주단위, volume, volume, long, 4, 0, 0, 0, , , ;
+		누적거래대금_천단위, money, money, long, 4, 0, 0, 0, , , ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시간_HH:SS, time, time, string, 5, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, string, 5, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, string, 5, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		직전체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+		체결가전일대비, chedebi, chedebi, long, 4, 0, 0, 0, , attr, ;
+		시간2, time2, time2, string, 8, 0, 0, 0, , , ;
+		장구분, jang, jang, string, 1, 0, 0, 0, , , ;
+		4bytes맞추기위해, FILLER2, FILLER2, string, 1, 0, 0, 0, , , ;
+		직전거래대금, nowmoney, nowmoney, long, 4, 0, 0, 0, , , ;
+		체결가, chejuka, chejuka, long, 4, 0, 0, 0, , , ;
+		체결강도, chegyulrate, chegyulrate, float, 4, 0, 0, 0, , , ;
+		FILLER, FILLER3, FILLER3, string, 40, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

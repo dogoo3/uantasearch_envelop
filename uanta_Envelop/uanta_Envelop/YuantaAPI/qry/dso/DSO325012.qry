@@ -1,0 +1,35 @@
+BEGIN_FUNCTION_MAP
+	.DSO,프로그램매매_신시간대별추이,DSO325012,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		거래소/코스닥구분, stkcode, stkcode, long, 4, 0, 123, 0, , , ;
+		금액수량구분, gumsugb, gumsugb, long, 4, 0, 124, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		지수, jisu, jisu, float, 4, 0, 0, 0, , , ;
+		순매수, sunmesu, sunmesu, long, 4, 0, 0, 0, , , ;
+		매수대비, sunmesudebi, sunmesudebi, long, 4, 0, 0, 0, , attr, ;
+		전체매도, medo, medo, long, 4, 0, 0, 0, , , ;
+		전체매수, mesu, mesu, long, 4, 0, 0, 0, , , ;
+		차익매도, chadosu, chadosu, long, 4, 0, 0, 0, , , ;
+		차익매수, chasusu, chasusu, long, 4, 0, 0, 0, , , ;
+		비차익매도, bidosu, bidosu, long, 4, 0, 0, 0, , , ;
+		비차익매수, bisusu, bisusu, long, 4, 0, 0, 0, , , ;
+		차익순매수, chasunmesu, chasunmesu, long, 4, 0, 0, 0, , , ;
+		비차익순매수, bisunmesu, bisunmesu, long, 4, 0, 0, 0, , , ;
+		차익순매수대비, chasunmesudebi, chasunmesudebi, long, 4, 0, 0, 0, , attr, ;
+		비차익순매수대비, bisunmesudebi, bisunmesudebi, long, 4, 0, 0, 0, , attr, ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회시간, contime, contime, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

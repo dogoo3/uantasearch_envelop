@@ -1,0 +1,36 @@
+BEGIN_FUNCTION_MAP
+	.DSO,종목별대차거래,DSO306404,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20161229;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		시작일자, startdate, startdate, long, 4, 0, 0, 0, , , ;
+		종료일자, enddate, enddate, long, 4, 0, 0, 0, , , ;
+		조회건수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		종목명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		체결, volume, volume, double, 8, 0, 0, 0, , , ;
+		상환, refund, refund, double, 8, 0, 0, 0, , , ;
+		잔고수량, jan_volume, jan_volume, double, 8, 0, 0, 0, , , ;
+		잔고금액, jan_money, jan_money, double, 8, 0, 0, 0, , , ;
+		시총대비, sichong_debi, sichong_debi, float, 4, 0, 0, 0, , , ;
+		공매도수량, sellvolume, sellvolume, double, 8, 0, 0, 0, , , ;
+		공매도대금, sellmoney, sellmoney, double, 8, 0, 0, 0, , , ;
+		공매도평균가, sellavg, sellavg, long, 4, 0, 0, 0, , , ;
+		대차잔고비중, loanrate, loanrate, float, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회값, conkey, conkey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

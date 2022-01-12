@@ -1,0 +1,23 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외주식코드정보,DSO000005,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=,MODDATE=;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		구분, gubun, gubun, long, 4, 10, 139, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 65, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목코드, code, code, varstring, 20, 0, 0, 0, , , ;
+		종목이름, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		구분, gubun, gubun, long, 4, 0, 140, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회순번, conindex, conindex, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

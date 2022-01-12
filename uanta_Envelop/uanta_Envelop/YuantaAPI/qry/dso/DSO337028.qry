@@ -1,0 +1,25 @@
+BEGIN_FUNCTION_MAP
+	.DSO,재무정보_주식현재가NEW,DSO337028,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		분기대비구분 (0:전분기 1:전년분기), bungbn, bungbn, long, 4, 0, 0, 0, , , ;
+		연결구분, congbn, congbn, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		전분기년도, title1, title1, varstring, 7, 0, 0, 0, , , ;
+		최근분기, title2, title2, varstring, 7, 0, 0, 0, , , ;
+		증감, title3, title3, varstring, 7, 0, 0, 0, , , ;
+		예측분기, title4, title4, varstring, 7, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		값, value1, value1, varstring, 40, 0, 0, 0, , , ;
+		값, value2, value2, varstring, 40, 0, 0, 0, , , ;
+		값, value3, value3, varstring, 40, 0, 0, 0, , , ;
+		값, value4, value4, varstring, 40, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

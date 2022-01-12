@@ -1,0 +1,32 @@
+BEGIN_FUNCTION_MAP
+	.DSO,종목장중추정순매수_NEW2,DSO323037,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20190122,MODIFYER=김운용,MODDATE=20201123;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장구분, jang_gubun, jang_gubun, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		수량금액구분, vol_gubun, vol_gubun, byte, 1, 0, 0, 0, , , ;
+		증감누적구분, sum_gubun, sum_gubun, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		회차시간, seq, seq, varstring, 11, 0, 0, 0, , , ;
+		외국인, fore, fore, float, 4, 0, 0, 0, , , ;
+		기관, ki, ki, float, 4, 0, 0, 0, , , ;
+		금융투자, stock, stock, float, 4, 0, 0, 0, , , ;
+		보험, ins, ins, float, 4, 0, 0, 0, , , ;
+		투신, tuja, tuja, float, 4, 0, 0, 0, , , ;
+		사모, samo, samo, float, 4, 0, 0, 0, , , ;
+		은행, bank, bank, float, 4, 0, 0, 0, , , ;
+		기타금융, jong, jong, float, 4, 0, 0, 0, , , ;
+		기금, kigeum, kigeum, float, 4, 0, 0, 0, , , ;
+		국가, gov, gov, float, 4, 0, 0, 0, , , ;
+		기타, etc, etc, float, 4, 0, 0, 0, , , ;
+		프로그램, prog, prog, float, 4, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

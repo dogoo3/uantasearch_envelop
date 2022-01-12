@@ -1,6 +1,10 @@
 [BAK_LIST]
-BAK_COUNT=2
-BAK_FILE0=.\\YuantaAPI.dll.bak
-NEW_FILE0=.\\yuantaapi.dll
-BAK_FILE1=.\\YOASession.dll.bak
-NEW_FILE1=.\\yoasession.dll
+BAK_COUNT=4
+BAK_FILE0=.\\DeView.exe.bak
+NEW_FILE0=.\\deview.exe
+BAK_FILE1=.\\YuantaAPI.dll.bak
+NEW_FILE1=.\\yuantaapi.dll
+BAK_FILE2=.\\YOASession.dll.bak
+NEW_FILE2=.\\yoasession.dll
+BAK_FILE3=.\\YuantaCOM.dll.bak
+NEW_FILE3=.\\yuantacom.dll

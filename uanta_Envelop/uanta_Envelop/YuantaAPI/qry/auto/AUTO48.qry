@@ -1,0 +1,25 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HUGANG_EXPECT2,AUTO48,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+		예상체결가, expectprice, expectprice, float, 4, 0, 0, 0, , attr, ;
+		예상체결대비, expectdebi, expectdebi, float, 4, 0, 0, 0, , attr, ;
+		FILLER, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		예상체결수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		예상체결등락율, expectrate, expectrate, float, 4, 0, 0, 0, , , ;
+		동시호가구분, dongsigubun, dongsigubun, long, 4, 0, 0, 0, , , ;
+		매도호가, medoprice, medoprice, float, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuprice, mesuprice, float, 4, 0, 0, 0, , attr, ;
+		FILLER, FILLER2, FILLER2, string, 2, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		시간, time, time, string, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

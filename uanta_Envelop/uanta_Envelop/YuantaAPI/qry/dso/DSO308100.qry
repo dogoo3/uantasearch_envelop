@@ -1,0 +1,49 @@
+BEGIN_FUNCTION_MAP
+	.DSO,비밀노트_SUMMARY,DSO308100,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20171215,MODIFYER=김운용,MODDATE=20180129;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내외구분, jang, jang, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목이름, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		PBR, pbr, pbr, float, 4, 0, 0, 0, , , ;
+		ROE, roe, roe, float, 4, 0, 0, 0, , , ;
+		ROA, roa, roa, float, 4, 0, 0, 0, , , ;
+		EPS, eps, eps, long, 4, 0, 0, 0, , , ;
+		BPS, bps, bps, long, 4, 0, 0, 0, , , ;
+		업종순위, up_position, up_position, varstring, 30, 0, 0, 0, , , ;
+		전체상위, total_rate, total_rate, varstring, 30, 0, 0, 0, , , ;
+		종합의견, total_comment, total_comment, varstring, 50, 0, 0, 0, , , ;
+		재무, finance_point, finance_point, long, 4, 0, 0, 0, , attr, ;
+		시장지표, market_point, market_point, long, 4, 0, 0, 0, , attr, ;
+		수익성, profit_point, profit_point, long, 4, 0, 0, 0, , attr, ;
+		성장성, grow_point, grow_point, long, 4, 0, 0, 0, , attr, ;
+		위험관리지표, risk_point, risk_point, long, 4, 0, 0, 0, , attr, ;
+		자가진단_수급, volume_dia, volume_dia, long, 4, 0, 0, 0, , attr, ;
+		자가진단-차트, chart_dia, chart_dia, long, 4, 0, 0, 0, , attr, ;
+		종합점수, total_point, total_point, long, 4, 0, 0, 0, , attr, ;
+		업종코드, upcode, upcode, long, 4, 0, 0, 0, , , ;
+		금융업구분, financialflag, financialflag, long, 4, 0, 0, 0, , , ;
+		부이름, buname, buname, varstring, 20, 0, 0, 0, , , ;
+		업종이름, upname, upname, varstring, 20, 0, 0, 0, , , ;
+		시총PER, sichong, sichong, varstring, 100, 0, 0, 0, , , ;
+		52주최고최저, highlow52, highlow52, varstring, 100, 0, 0, 0, , , ;
+		진단의견, report, report, varstring, 1000, 0, 0, 0, , , ;
+		재무, finance_diff, finance_diff, long, 4, 0, 0, 0, , , ;
+		시장지표, market_diff, market_diff, long, 4, 0, 0, 0, , , ;
+		수익성, profit_diff, profit_diff, long, 4, 0, 0, 0, , , ;
+		성장성, grow_diff, grow_diff, long, 4, 0, 0, 0, , , ;
+		위험관리지표, risk_diff, risk_diff, long, 4, 0, 0, 0, , , ;
+		자가진단_수급, volume_diff, volume_diff, long, 4, 0, 0, 0, , , ;
+		자가진단_차트, chart_diff, chart_diff, long, 4, 0, 0, 0, , , ;
+		종합점수, total_diff, total_diff, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

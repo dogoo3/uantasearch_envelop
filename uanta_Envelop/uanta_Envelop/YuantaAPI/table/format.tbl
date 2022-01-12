@@ -71,7 +71,6 @@
 04ARI@MERV    아르헨티나 MERVAL                       MERVAL BUENOS AIRES                     
 04CLI@IGPA    칠레 IGPA                               CHILE IGPA                              
 04PEI@IGBVL   페루 LIMA                               PERU LIMA INDEX                         
-04VEI@INDG    베네주엘라                              VENEZUELA GENERAL                       
 04CAI@SPTSX   캐나다 S&P TSX                          CANADA S&P TSX                          
 04DJI@DJI     다우 산업                               DowJones Industrial                     
 04NAS@IXIC    나스닥 종합                             NASDAQ Composite                        
@@ -525,6 +524,17 @@
 28KIR@TA02Y   통안증권 2년                            MSB 2Y                                  
 28KIR@TA364   통안증권 1년                            MBS 1Y                                  
 28KBP@CALL    콜(1일)                                 CALL 1Day                               
+28USA@B01M    미국금리01M                             USA Bond 01M                            
+28USA@B03M    미국금리03M                             USA Bond 03M                            
+28USA@B06M    미국금리06M                             USA Bond 06M                            
+28USA@B01Y    미국금리01Y                             USA Bond 01Y                            
+28USA@B02Y    미국금리02Y                             USA Bond 02Y                            
+28USA@B03Y    미국금리03Y                             USA Bond 03Y                            
+28USA@B05Y    미국금리05Y                             USA Bond 05Y                            
+28USA@B07Y    미국금리07Y                             USA Bond 07Y                            
+28USA@B10Y    미국금리10Y                             USA Bond 10Y                            
+28USA@B20Y    미국금리20Y                             USA Bond 20Y                            
+28USA@B30Y    미국금리30Y                             USA Bond 30Y                            
 30NYM@CL      WTI                                     SWCRUD                                  
 30NYM@NG      천연가스                                NATGAS                                  
 30IPE@EB      브렌트유                                BRENT                                   
@@ -558,6 +568,7 @@
 31NS-S-2G8    NAND Spot 2Gb 256Mx8 SLC                NAND Spot 2Gb 256Mx8 SLC                
 314-8G8-2G1/  DDR4 8Gb 1Gx8 2133/2400MHz              DDR4 8Gb 1Gx8 2133/2400MHz              
 314-4G8-2G1/  DDR4 4Gb 512Mx8 2133/2400MHz            DDR4 4Gb 512Mx8 2133/2400MHz            
+31D4-8G-512-  DDR4 Spot 8G (512M*16) 2666 Mbps        DDR4 Spot 8G (512M*16) 2666 Mbps            
 313-8G16-1G6  DDR3 8Gb 512Mx16 1600MHz                DDR3 8Gb 512Mx16 1600MHz                
 313-4G16-1G3  DDR3 4Gb 256Mx16 1333/1600MHz           DDR3 4Gb 256Mx16 1333/1600MHz           
 32COM@GC      금                                      GOLD                                    
@@ -612,7 +623,7 @@
 4906          권리락
 4907          뮤추얼펀드
 4908          Kospi200
-4909          Kosdaq50
+4909          Kosdaq150
 5000          전체
 5001          감리종목
 5002          관리종목
@@ -628,7 +639,7 @@
 5105          액면분할주
 5106          권리락
 5107          뮤추얼펀드
-5109          Kosdaq50
+5109          Kosdaq150
 5201          은행
 5202          증권
 5203          투자신탁
@@ -949,3 +960,6 @@
 60AB          산업재                                  10
 60A4          고배당50                                75
 60A5          배당성장50                              77
+60AC          K-뉴딜 BBIG                             277
+60AD          K-뉴딜 2차전지                          278
+60AE          K-뉴딜 바이오                           279

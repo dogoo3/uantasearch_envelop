@@ -1,0 +1,46 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외선물 일별청산내역조회,DSO862011,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=이예임,CREDATE=20161216,MODIFYER=유창재,MODDATE=20161228;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		계좌비밀번호, acnt_pswd, acnt_pswd, varstring, 100, 4, 0, 0, , , ;
+		시작일자, str_dt, str_dt, varstring, 8, 0, 0, 0, , , ;
+		종료일자, end_dt, end_dt, varstring, 8, 0, 0, 0, , , ;
+		종목코드, frndrv_gds_cd, frndrv_gds_cd, varstring, 32, 0, 0, 0, , , ;
+		선물옵션구분(%:전체 F:선물 O:옵, ftop_tp, ftop_tp, varstring, 1, 0, 0, 0, , , ;
+		구분(1:주문번호역순 2:주문번호, qty_tp, qty_tp, varstring, 1, 0, 0, 0, , , ;
+		통화코드, prc_crc_cd, prc_crc_cd, varstring, 3, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		청산수량계, tot_clrn_qty, tot_clrn_qty, double, 8, 0, 0, 0, , , ;
+		청산손익계, tot_clrn_pl_amt, tot_clrn_pl_amt, double, 8, 0, 0, 0, , , ;
+		수수료계, tot_bas_cmsn_amt, tot_bas_cmsn_amt, double, 8, 0, 0, 0, , , ;
+		순손익계, tot_net_pl_amt, tot_net_pl_amt, double, 8, 0, 0, 0, , , ;
+		총갯수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		청산번호, frndrv_clrn_no, frndrv_clrn_no, varstring, 5, 0, 0, 0, , , ;
+		종목코드, frndrv_gds_cd, frndrv_gds_cd, varstring, 32, 0, 0, 0, , , ;
+		통화코드, prc_crc_cd, prc_crc_cd, varstring, 3, 0, 0, 0, , , ;
+		매매구분(B:매수 S:매도), sb_tp_cd, sb_tp_cd, varstring, 30, 0, 0, 0, , , ;
+		청산수량, clrn_qty, clrn_qty, double, 8, 0, 0, 0, , , ;
+		진입가격, new_mth_prc, new_mth_prc, double, 8, 0, 0, 0, , , ;
+		청산가격, clrn_mth_prc, clrn_mth_prc, double, 8, 0, 0, 0, , , ;
+		청산손익, cvrt_clrn_pl_amt, cvrt_clrn_pl_amt, double, 8, 0, 0, 0, , , ;
+		총수수료(매수+매도), cvrt_bas_cmsn_amt, cvrt_bas_cmsn_amt, double, 8, 0, 0, 0, , , ;
+		순손익, cvrt_net_pl_amt, cvrt_net_pl_amt, double, 8, 0, 0, 0, , , ;
+		진입시각, new_mth_dtm, new_mth_dtm, varstring, 40, 0, 0, 0, , , ;
+		청산시각, clrn_mth_dtm, clrn_mth_dtm, varstring, 40, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		총갯수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음조회, next_data, next_data, varstring, 50, 0, 0, 0, , , ;
+		다음조회값, nextval, nextval, varstring, 100, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

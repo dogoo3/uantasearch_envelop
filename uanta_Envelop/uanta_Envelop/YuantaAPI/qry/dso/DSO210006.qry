@@ -5,7 +5,7 @@ BEGIN_FUNCTION_MAP
 	begin
 		계좌식별ID, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
 		비밀번호, passwd, passwd, varstring, 100, 4, 0, 0, , , ;
-		순서구분, order_gubun, order_gubun, byte, 1, 0, 0, 0, , , ;
+		순서구분, order_gubun, order_gubun, byte, 1, 0, 131, 0, , , ;
 		종목코드, jong_code, jong_code, varstring, 12, 0, 0, 0, , , ;
 	end
 	OutBlock1, OutBlock1, output;

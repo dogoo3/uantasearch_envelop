@@ -1,0 +1,42 @@
+BEGIN_FUNCTION_MAP
+	.DSO,재무정보_재무제표NEW,DSO337021,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김수웅,MODDATE=20211022;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		데이터구분, datagbn, datagbn, long, 4, 0, 160, 0, , , ;
+		결산구분, setlgbn, setlgbn, long, 4, 0, 161, 0, , , ;
+		연결구분, congbn, congbn, long, 4, 0, 162, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		일자, date1, date1, varstring, 7, 0, 0, 0, , , ;
+		일자, date2, date2, varstring, 7, 0, 0, 0, , , ;
+		일자, date3, date3, varstring, 7, 0, 0, 0, , , ;
+		일자, date4, date4, varstring, 7, 0, 0, 0, , , ;
+		일자, date5, date5, varstring, 7, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		계정명, name, name, varstring, 40, 0, 0, 0, , , ;
+		값, value1, value1, double, 8, 0, 0, 0, , , ;
+		값, value2, value2, double, 8, 0, 0, 0, , , ;
+		값, value3, value3, double, 8, 0, 0, 0, , , ;
+		값, value4, value4, double, 8, 0, 0, 0, , , ;
+		값, value5, value5, double, 8, 0, 0, 0, , , ;
+		값, value6, value6, double, 8, 0, 0, 0, , , ;
+		값, value7, value7, double, 8, 0, 0, 0, , , ;
+		값, value8, value8, double, 8, 0, 0, 0, , , ;
+		값, value9, value9, double, 8, 0, 0, 0, , , ;
+		값, value10, value10, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		일자, date6, date6, varstring, 7, 0, 0, 0, , , ;
+		일자, date7, date7, varstring, 7, 0, 0, 0, , , ;
+		일자, date8, date8, varstring, 7, 0, 0, 0, , , ;
+		일자, date9, date9, varstring, 7, 0, 0, 0, , , ;
+		일자, date10, date10, varstring, 7, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -1,0 +1,39 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외주식매매제한종목조회,DSO761018,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=한병찬,CREDATE=20210503,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jong_code, jong_code, varstring, 32, 0, 164, 0, , , ;
+		시장구분, mkt_tp_cd, mkt_tp_cd, varstring, 2, 0, 165, 0, , , ;
+		제한구분, frgn_sb_lmt_cau_tp_cd, frgn_sb_lmt_cau_tp_cd, varstring, 2, 0, 166, 0, , , ;
+		매매제한, frgn_sb_lmt_tp_cd, frgn_sb_lmt_tp_cd, varstring, 2, 0, 167, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		총갯수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목코드, frgn_stks_stk_cd, frgn_stks_stk_cd, varstring, 32, 0, 0, 0, , , ;
+		표준종목코드, std_frgn_stks_stk_cd, std_frgn_stks_stk_cd, varstring, 32, 0, 0, 0, , , ;
+		종목한글명, kor_stk_nm, kor_stk_nm, varstring, 80, 0, 0, 0, , , ;
+		제한구분코드, frgn_sb_lmt_cau_tp_cd, frgn_sb_lmt_cau_tp_cd, varstring, 2, 0, 0, 0, , , ;
+		제한구분명, frgn_sb_lmt_cau_tp_nm, frgn_sb_lmt_cau_tp_nm, varstring, 40, 0, 0, 0, , , ;
+		매매제한코드, frgn_sb_lmt_tp_cd, frgn_sb_lmt_tp_cd, varstring, 2, 0, 0, 0, , , ;
+		매매제한명, frgn_sb_lmt_tp_nm, frgn_sb_lmt_tp_nm, varstring, 40, 0, 0, 0, , , ;
+		제한상태여부YN, trd_lmt_yn, trd_lmt_yn, varstring, 2, 0, 0, 0, , , ;
+		제한상태, trd_lmt_nm, trd_lmt_nm, varstring, 40, 0, 0, 0, , , ;
+		제한시작일, lmt_str_dt, lmt_str_dt, varstring, 8, 0, 0, 0, , , ;
+		제한종료일, lmt_end_dt, lmt_end_dt, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		다음여부, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		총갯수, list_cnt, list_cnt, long, 4, 0, 0, 0, , , ;
+		다음조회값, nextval, nextval, varstring, 100, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

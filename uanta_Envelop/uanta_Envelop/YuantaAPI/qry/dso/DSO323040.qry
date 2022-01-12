@@ -1,0 +1,61 @@
+BEGIN_FUNCTION_MAP
+	.DSO,매매주체별순매수도상위3,DSO323040,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20190731,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		최초 구분(사용안함), oncreate, oncreate, byte, 1, 0, 154, 0, , , ;
+		장구분, jang_gubun, jang_gubun, byte, 1, 0, 155, 0, , , ;
+		순매수_순매도 구분, sun_gubun, sun_gubun, byte, 1, 0, 156, 0, , , ;
+		매매 구분, meme_gubun, meme_gubun, byte, 1, 0, 157, 0, , , ;
+		수량_금액 구분(사용안함), sumoney_gubun, sumoney_gubun, byte, 1, 0, 0, 0, , , ;
+		일별_누적 구분, day_gubun, day_gubun, byte, 1, 0, 158, 0, , , ;
+		조회시작일, startdate, startdate, varstring, 8, 0, 0, 0, , , ;
+		조회종료일, enddate, enddate, varstring, 8, 0, 0, 0, , , ;
+		종목코드여부, jongcheck, jongcheck, long, 4, 0, 159, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		현재가구분, curjuka_cb, curjuka_cb, long, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		거래량구분, volume_cb, volume_cb, long, 4, 0, 0, 0, , , ;
+		등락율, rate, rate, long, 4, 0, 0, 0, , , ;
+		등락율구분, rate_cb, rate_cb, long, 4, 0, 0, 0, , , ;
+		조건구분, choice, choice, long, 4, 0, 0, 0, , , ;
+		관리종목제외, except1, except1, long, 4, 0, 0, 0, , , ;
+		우선주제외, except2, except2, long, 4, 0, 0, 0, , , ;
+		감리종목제외, except3, except3, long, 4, 0, 0, 0, , , ;
+		투자유의종목제외, except4, except4, long, 4, 0, 0, 0, , , ;
+		ETF종목제외, except5, except5, long, 4, 0, 0, 0, , , ;
+		ETN종목제외, except6, except6, long, 4, 0, 0, 0, , , ;
+		거래대금, money, money, long, 4, 0, 0, 0, , , ;
+		거래대금구분, money_cb, money_cb, long, 4, 0, 0, 0, , , ;
+		거래대금기간, money_rg, money_rg, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		검색시작일, sdate, sdate, varstring, 8, 0, 0, 0, , , ;
+		검색종료일, edate, edate, varstring, 8, 0, 0, 0, , , ;
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목명, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		외국+기관 순매수, forki_sun, forki_sun, float, 4, 0, 0, 0, , , ;
+		외국 순매수, for_sun, for_sun, float, 4, 0, 0, 0, , , ;
+		기관 순매수, ki_sun, ki_sun, float, 4, 0, 0, 0, , , ;
+		개인 순매수, ant_sun, ant_sun, float, 4, 0, 0, 0, , , ;
+		외국계 순매수, mem_sun, mem_sun, float, 4, 0, 0, 0, , , ;
+		프로그램 순매수, prog_sun, prog_sun, float, 4, 0, 0, 0, , , ;
+		종목코드여부 0없음 1종목조회, jongcheck, jongcheck, long, 4, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		거래대금, money, money, double, 8, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		거래량_대금, bytekey, bytekey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

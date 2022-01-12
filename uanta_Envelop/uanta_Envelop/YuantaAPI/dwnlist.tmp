@@ -1,7 +1,0 @@
-[DOWN_LIST]
-DOWN_COUNT=5
-DOWN_FILE0=.\table\bondcode.tbl
-DOWN_FILE1=.\table\series_new.tbl
-DOWN_FILE2=.\table\elwcode.tbl
-DOWN_FILE3=.\table\ballooncode.tbl
-DOWN_FILE4=.\table\master.tbl

@@ -31,6 +31,10 @@ namespace uanta_Envelop
             icpc.FindConnectionPoint(ref IID_QueryEvents, out icp);
             icp.Advise(this, out dwCookie);
         }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            m_iYuantaAPI.YOA_UnInitial();
+        }
 
         #region IYuantaAPIEvents 멤버
 
@@ -60,9 +64,30 @@ namespace uanta_Envelop
         #endregion
         private void button1_Click(object sender, EventArgs e)
         {
-            int a = m_iYuantaAPI.YOA_Initial("simul.tradar.api.com", Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\YuantaAPI");
+            // API 등록(테스트 기본 설정)
+            //int code = m_iYuantaAPI.YOA_Initial("real.tradar.api.com", Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\YuantaAPI");
+            //MessageBox.Show(code.ToString());
+            // API 등록(실제빌드 기본 설정)
+            int code = m_iYuantaAPI.YOA_Initial("real.tradar.api.com", "");
+            MessageBox.Show(code.ToString());
+        }
 
-            MessageBox.Show(a.ToString());
+        private void button2_Click(object sender, EventArgs e)
+        {
+            long login = m_iYuantaAPI.YOA_Login("dogoo3", "rhks12!@", "!rkqo1122dlk");
+            MessageBox.Show(login.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string account = "";
+            int n = m_iYuantaAPI.YOA_GetAccountCount();
+
+            for(int i=0;i<n;i++)
+            {
+                account = m_iYuantaAPI.YOA_GetAccount(i);
+            }
+            MessageBox.Show(account);
         }
     }
 }

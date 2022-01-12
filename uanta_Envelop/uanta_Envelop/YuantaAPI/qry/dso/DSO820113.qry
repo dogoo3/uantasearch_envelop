@@ -1,0 +1,15 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외선물 연결선물 조회,DSO820113,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=박상현;
+	BEGIN_DATA_MAP
+	InBlock1, , input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 32, 0, 0, 0, , , ;
+	end
+	OutBlock1, , output;
+	begin
+		연결종목코드, linkcode, linkcode, varstring, 32, 0, 0, 0, , , ;
+		소수점크기, pointsize, pointsize, long, 4, 0, 0, 0, , , ;
+		표기진법, dispscale, dispscale, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

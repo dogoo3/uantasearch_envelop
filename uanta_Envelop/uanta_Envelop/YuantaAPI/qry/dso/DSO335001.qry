@@ -1,0 +1,38 @@
+BEGIN_FUNCTION_MAP
+	.DSO,일자별신용현황,DSO335001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20160225;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		거래소코스닥구분(1:장내 11:코스닥), stk_code, stk_code, long, 4, 0, 0, 0, , , ;
+		융자대주구분(0:융자 1:대주), creditgb, creditgb, long, 4, 0, 0, 0, , , ;
+		조회일자, searchdate, searchdate, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		일자, basedate, basedate, varstring, 10, 0, 0, 0, , , ;
+		종가, juka, juka, long, 4, 0, 0, 0, , attr, ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		신규, newstocks, newstocks, long, 4, 0, 0, 0, , , ;
+		상환, backstocks, backstocks, long, 4, 0, 0, 0, , , ;
+		잔고(수량), reststocks, reststocks, long, 4, 0, 0, 0, , , ;
+		잔고(금액), restmoney, restmoney, long, 4, 0, 0, 0, , , ;
+		잔고대비, reststocksdebi, reststocksdebi, long, 4, 0, 0, 0, , , ;
+		공여율, rate, rate, float, 4, 0, 0, 0, , , ;
+		잔고율, restrate, restrate, float, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회일자, condate, condate, varstring, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

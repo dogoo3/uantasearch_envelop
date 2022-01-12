@@ -1,0 +1,18 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외주식주문가능수량,DSO761007,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20201126;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌식별ID, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		비밀번호, passwd, passwd, varstring, 100, 4, 0, 0, , , ;
+		시장구분, exchange, exchange, varstring, 3, 0, 152, 0, , , ;
+		종목코드, jong_code, jong_code, varstring, 32, 0, 0, 0, , , ;
+		주문가격, order_price, order_price, double, 8, 0, 0, 0, , , ;
+		정규시간외구분, rg_ot_gubun, rg_ot_gubun, varstring, 1, 0, 153, 0, 1:정규장, , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		주문가능수량, possible_cnt, possible_cnt, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -3,7 +3,7 @@ BEGIN_FUNCTION_MAP
 	BEGIN_DATA_MAP
 	InBlock1, InBlock1, input;
 	begin
-		종목코드, jongcode, jongcode, varstring, 32, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 32, 9, 0, 0, , , ;
 		조회시작일, startdate, startdate, long, 4, 0, 0, 0, , , ;
 		조회종료일, enddata, enddata, long, 4, 0, 0, 0, , , ;
 		조회수, readcount, readcount, long, 4, 0, 0, 0, , , ;

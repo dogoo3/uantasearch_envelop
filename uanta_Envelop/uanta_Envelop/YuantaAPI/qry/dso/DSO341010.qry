@@ -1,0 +1,78 @@
+BEGIN_FUNCTION_MAP
+	.DSO,신주인수권현재가,DSO341010,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 12, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목명, jongname, jongname, varstring, 50, 0, 0, 0, , , ;
+		액면가, faceprice, faceprice, long, 4, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, long, 4, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, varstring, 10, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, varstring, 10, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		대비율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		거래대금(천원), money, money, double, 8, 0, 0, 0, , , ;
+		전일종가, prevlastjuka, prevlastjuka, long, 4, 0, 0, 0, , , ;
+		전일거래량, prevvolume, prevvolume, double, 8, 0, 0, 0, , , ;
+		기준가, kijunka, kijunka, long, 4, 0, 0, 0, , , ;
+		상한가, maxhokajuka, maxhokajuka, long, 4, 0, 0, 0, , attr, ;
+		하한가, minhokajuka, minhokajuka, long, 4, 0, 0, 0, , attr, ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , , ;
+		결산기(월), closeday, closeday, varstring, 2, 0, 0, 0, , , ;
+		상장주식(백), cntstock, cntstock, double, 8, 0, 0, 0, , , ;
+		자본금, capitalmoney, capitalmoney, long, 4, 0, 0, 0, , , ;
+		PER, per, per, long, 4, 0, 0, 0, , , ;
+		상장일, openday, openday, varstring, 10, 0, 0, 0, , , ;
+		행사시작일, startday, startday, varstring, 10, 0, 0, 0, , , ;
+		행사종료일, endday, endday, varstring, 10, 0, 0, 0, , , ;
+		행사가, exeprice, exeprice, long, 4, 0, 0, 0, , , ;
+		현재가, stock_curjuka, stock_curjuka, long, 4, 0, 0, 0, , , ;
+		대비, stock_debi, stock_debi, long, 4, 0, 0, 0, , attr, ;
+		대비율, stock_debirate, stock_debirate, float, 4, 0, 0, 0, , , ;
+		주식종목코드, stock_code, stock_code, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		거래원 매도상위사, medocomno, medocomno, varstring, 3, 0, 0, 0, , , ;
+		거래원 매도상위사거래량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		거래원 매수상위사, mesucomno, mesucomno, varstring, 3, 0, 0, 0, , , ;
+		거래원 매수상위사거래량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		최고가, highjuka, highjuka, long, 4, 0, 0, 0, , , ;
+		최고가일, highjukaday, highjukaday, varstring, 7, 0, 0, 0, , , ;
+		최저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , , ;
+		최저가일, lowjukaday, lowjukaday, varstring, 7, 0, 0, 0, , , ;
+	end
+	OutBlock4, OutBlock4, output;
+	begin
+		시간, hokatime, hokatime, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock5, OutBlock5, output, occurs;
+	begin
+		호가, hoka, hoka, long, 4, 0, 0, 0, , attr, ;
+		잔량, jan, jan, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock6, OutBlock6, output, occurs;
+	begin
+		호가, hoka, hoka, long, 4, 0, 0, 0, , attr, ;
+		잔량, jan, jan, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock7, OutBlock7, output;
+	begin
+		매도 총잔량, medotot, medotot, long, 4, 0, 0, 0, , , ;
+		매수 총잔량, mesutot, mesutot, long, 4, 0, 0, 0, , , ;
+		예상체결가, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		예상수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

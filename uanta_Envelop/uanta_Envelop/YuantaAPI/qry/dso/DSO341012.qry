@@ -1,0 +1,46 @@
+BEGIN_FUNCTION_MAP
+	.DSO,신주인수권현재가_PRICETABLE,DSO341012,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 12, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, long, 4, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , , ;
+		대비율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		기준가, kijunka, kijunka, long, 4, 0, 0, 0, , , ;
+		상장주식(백), cntstock, cntstock, double, 8, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		거래원 매도상위사, medocomno, medocomno, varstring, 3, 0, 0, 0, , , ;
+		거래원 매도상위사거래량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		거래원 매수상위사, mesucomno, mesucomno, varstring, 3, 0, 0, 0, , , ;
+		거래원 매수상위사거래량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		거래량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+	end
+	OutBlock4, OutBlock4, output, occurs;
+	begin
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock5, OutBlock5, output;
+	begin
+		매도 총잔량, medotot, medotot, long, 4, 0, 0, 0, , , ;
+		매수 총잔량, mesutot, mesutot, long, 4, 0, 0, 0, , , ;
+		예상체결가, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		예상수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		시간, hokatime, hokatime, varstring, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

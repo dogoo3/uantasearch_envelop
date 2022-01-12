@@ -1,0 +1,59 @@
+BEGIN_FUNCTION_MAP
+	.DSO,복수종목호가,DSO309002,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=김운용,CREDATE=20191104,MODIFYER=김운용,MODDATE=20200804;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드리스트, jongcodelist, jongcodelist, varstring, 140, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		종목이름, jongname, jongname, varstring, 20, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		매도호가1, medohoka1, medohoka1, long, 4, 0, 0, 0, , , ;
+		매도호가2, medohoka2, medohoka2, long, 4, 0, 0, 0, , , ;
+		매도호가3, medohoka3, medohoka3, long, 4, 0, 0, 0, , , ;
+		매도호가4, medohoka4, medohoka4, long, 4, 0, 0, 0, , , ;
+		매도호가5, medohoka5, medohoka5, long, 4, 0, 0, 0, , , ;
+		매도호가6, medohoka6, medohoka6, long, 4, 0, 0, 0, , , ;
+		매도호가7, medohoka7, medohoka7, long, 4, 0, 0, 0, , , ;
+		매도호가8, medohoka8, medohoka8, long, 4, 0, 0, 0, , , ;
+		매도호가9, medohoka9, medohoka9, long, 4, 0, 0, 0, , , ;
+		매도호가10, medohoka10, medohoka10, long, 4, 0, 0, 0, , , ;
+		매수호가1, mesuhoka1, mesuhoka1, long, 4, 0, 0, 0, , , ;
+		매수호가2, mesuhoka2, mesuhoka2, long, 4, 0, 0, 0, , , ;
+		매수호가3, mesuhoka3, mesuhoka3, long, 4, 0, 0, 0, , , ;
+		매수호가4, mesuhoka4, mesuhoka4, long, 4, 0, 0, 0, , , ;
+		매수호가5, mesuhoka5, mesuhoka5, long, 4, 0, 0, 0, , , ;
+		매수호가6, mesuhoka6, mesuhoka6, long, 4, 0, 0, 0, , , ;
+		매수호가7, mesuhoka7, mesuhoka7, long, 4, 0, 0, 0, , , ;
+		매수호가8, mesuhoka8, mesuhoka8, long, 4, 0, 0, 0, , , ;
+		매수호가9, mesuhoka9, mesuhoka9, long, 4, 0, 0, 0, , , ;
+		매수호가10, mesuhoka10, mesuhoka10, long, 4, 0, 0, 0, , , ;
+		매도잔량1, medovol1, medovol1, long, 4, 0, 0, 0, , , ;
+		매도잔량2, medovol2, medovol2, long, 4, 0, 0, 0, , , ;
+		매도잔량3, medovol3, medovol3, long, 4, 0, 0, 0, , , ;
+		매도잔량4, medovol4, medovol4, long, 4, 0, 0, 0, , , ;
+		매도잔량5, medovol5, medovol5, long, 4, 0, 0, 0, , , ;
+		매도잔량6, medovol6, medovol6, long, 4, 0, 0, 0, , , ;
+		매도잔량7, medovol7, medovol7, long, 4, 0, 0, 0, , , ;
+		매도잔량8, medovol8, medovol8, long, 4, 0, 0, 0, , , ;
+		매도잔량9, medovol9, medovol9, long, 4, 0, 0, 0, , , ;
+		매도잔량10, medovol10, medovol10, long, 4, 0, 0, 0, , , ;
+		매수잔량1, mesuvol1, mesuvol1, long, 4, 0, 0, 0, , , ;
+		매수잔량2, mesuvol2, mesuvol2, long, 4, 0, 0, 0, , , ;
+		매수잔량3, mesuvol3, mesuvol3, long, 4, 0, 0, 0, , , ;
+		매수잔량4, mesuvol4, mesuvol4, long, 4, 0, 0, 0, , , ;
+		매수잔량5, mesuvol5, mesuvol5, long, 4, 0, 0, 0, , , ;
+		매수잔량6, mesuvol6, mesuvol6, long, 4, 0, 0, 0, , , ;
+		매수잔량7, mesuvol7, mesuvol7, long, 4, 0, 0, 0, , , ;
+		매수잔량8, mesuvol8, mesuvol8, long, 4, 0, 0, 0, , , ;
+		매수잔량9, mesuvol9, mesuvol9, long, 4, 0, 0, 0, , , ;
+		매수잔량10, mesuvol10, mesuvol10, long, 4, 0, 0, 0, , , ;
+		체결강도, chegyulrate, chegyulrate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

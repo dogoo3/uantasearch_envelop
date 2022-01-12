@@ -1,0 +1,40 @@
+BEGIN_FUNCTION_MAP
+	.DSO,매매입체분석_일자별_NEW,DSO323038,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20190910,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		조회건수, readcount, readcount, byte, 1, 0, 0, 0, , , ;
+		장구분(1:거래소 2:코스닥), jang_gubun, jang_gubun, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		수량 금액 구분( 1:수량 2:금액 3:시총대비), sun_gubun, sun_gubun, byte, 1, 0, 0, 0, , , ;
+		일별 누적 구분( 0:일별 1:누적), day_gubun, day_gubun, byte, 1, 0, 0, 0, , , ;
+		조회시작일, startdate, startdate, varstring, 8, 0, 0, 0, , , ;
+		조회종료일, enddate, enddate, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		조회시작일, fromdate, fromdate, varstring, 8, 0, 0, 0, , , ;
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		일자, date, date, varstring, 10, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		외국 순매수, for_sun, for_sun, float, 4, 0, 0, 0, , , ;
+		기관 순매수, ki_sun, ki_sun, float, 4, 0, 0, 0, , , ;
+		개인 순매수, ant_sun, ant_sun, float, 4, 0, 0, 0, , , ;
+		기타 순매수, etc_sun, etc_sun, float, 4, 0, 0, 0, , , ;
+		외국계 순매수, mem_sun, mem_sun, float, 4, 0, 0, 0, , , ;
+		프로그램 순매수, prog_sun, prog_sun, float, 4, 0, 0, 0, , , ;
+		등록외국 순매수, fore1_sun, fore1_sun, float, 4, 0, 0, 0, , , ;
+		비등록외국 순매수, fore2_sun, fore2_sun, float, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음일자, condate, condate, varstring, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -39,6 +39,7 @@ BEGIN_FUNCTION_MAP
 		계좌번호, s_lst_acnt_no, s_lst_acnt_no, string, 12, 0, 0, 0, , , ;
 		가격진법수, s_ld_prc_nttn_cnt, s_ld_prc_nttn_cnt, string, 10, 0, 0, 0, , , ;
 		가격소수점수, s_ld_prc_dcpt_cnt, s_ld_prc_dcpt_cnt, string, 10, 0, 0, 0, , , ;
+		주문잔량, s_remn_q, s_remn_q, string, 10, 0, 0, 0, , , ;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

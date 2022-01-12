@@ -1,0 +1,20 @@
+BEGIN_FUNCTION_MAP
+	.DSO,증권전문가메뉴,DSO901015,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=김운용,CREDATE=20191011,MODIFYER=김운용,MODDATE=20191014;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		아이디, htsid, htsid, varstring, 8, 0, 0, 0, , , ;
+		증권전문가코드, code, code, varstring, 3, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		메뉴, menulist, menulist, varstring, 2000, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		계좌번호, acnt_aid, acnt_aid, varstring, 15, 0, 0, 0, , , ;
+		MTS포함여부, mts_yn, mts_yn, varstring, 1, 0, 0, 0, , , ;
+		화면번호, scrn_no, scrn_no, varstring, 200, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

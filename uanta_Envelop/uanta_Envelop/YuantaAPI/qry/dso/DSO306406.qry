@@ -1,0 +1,37 @@
+BEGIN_FUNCTION_MAP
+	.DSO,일자별대차거래,DSO306406,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20181108;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장구분, jang_gubun, jang_gubun, long, 4, 0, 1, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		조회일자, basedate, basedate, varstring, 8, 0, 0, 0, , , ;
+		조회건수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+		시작일자, startdate, startdate, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		일자, date, date, varstring, 10, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		체결, volume, volume, double, 8, 0, 0, 0, , , ;
+		상환, refund, refund, double, 8, 0, 0, 0, , , ;
+		잔고수량, jan_volume, jan_volume, double, 8, 0, 0, 0, , , ;
+		잔고금액, jan_money, jan_money, double, 8, 0, 0, 0, , , ;
+		공매도수량, sell_volume, sell_volume, double, 8, 0, 0, 0, , , ;
+		공매도금액, sell_money, sell_money, double, 8, 0, 0, 0, , , ;
+		공매도평균가, sell_price, sell_price, long, 4, 0, 0, 0, , , ;
+		공매도비율, sellrate, sellrate, varstring, 7, 0, 0, 0, , , ;
+		대차잔고비중, loanrate, loanrate, float, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output;
+	begin
+		다음버튼, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회일자, condate, condate, varstring, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

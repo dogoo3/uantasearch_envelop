@@ -1,0 +1,32 @@
+BEGIN_FUNCTION_MAP
+	.DSO,후강통_예상체결가,DSO741026,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20210420,MODIFYER=김운용,MODDATE=20210823;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		시장구분, jang, jang, long, 4, 0, 151, 0, , , ;
+		상승하락구분, gubun, gubun, long, 4, 0, 142, 0, , , ;
+		기준값, value, value, float, 4, 0, 0, 0, , , ;
+		요청데이터건수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+		실시간지연시세여부, delay, delay, long, 4, 8, 151, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목코드, code, code, varstring, 12, 0, 0, 0, , , ;
+		종목명, jname, jname, varstring, 40, 0, 0, 0, , , ;
+		기준가, standardprice, standardprice, float, 4, 0, 0, 0, , , ;
+		예상체결가, expectprice, expectprice, float, 4, 0, 0, 0, , , ;
+		기준가대비, expectdebi, expectdebi, float, 4, 0, 0, 0, , attr, ;
+		예상체결가등락률, expectrate, expectrate, float, 4, 0, 0, 0, , , ;
+		예상체결량, expectvolume, expectvolume, double, 8, 0, 0, 0, , , ;
+		데이트레이딩, daytrading, daytrading, varstring, 1, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		스크린키, scrkey, scrkey, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

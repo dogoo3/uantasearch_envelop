@@ -1,0 +1,28 @@
+BEGIN_FUNCTION_MAP
+	.DSO,후강퉁_상승하락률상위_API,DSO741027,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREATER=한병찬,CREDATE=20210511,MODIFYER=김운용,MODDATE=20210726;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		시장구분, jang, jang, long, 4, 0, 148, 0, , , ;
+		상승하락구분, gubun, gubun, long, 4, 0, 142, 0, , , ;
+		기준값, value, value, float, 4, 0, 0, 0, , , ;
+		조회건수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+		실시간지연시세여부, delay, delay, long, 4, 8, 122, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		종목코드, code, code, varstring, 12, 0, 0, 0, , , ;
+		종목명, jname, jname, varstring, 40, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, float, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		거래대금, money, money, double, 8, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, float, 4, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, float, 4, 0, 0, 0, , , ;
+		기준가, stdjuka, stdjuka, float, 4, 0, 0, 0, , , ;
+		데이트레이딩, daytrading, daytrading, varstring, 1, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

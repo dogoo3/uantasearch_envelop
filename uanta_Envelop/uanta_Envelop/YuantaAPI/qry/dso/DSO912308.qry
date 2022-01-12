@@ -1,0 +1,40 @@
+BEGIN_FUNCTION_MAP
+	.DSO,시뮬레이션_매매내역2,DSO912308,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20190805,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		HTSID, userid, userid, varstring, 8, 0, 0, 0, , , ;
+		포트번호, portno, portno, long, 4, 0, 0, 0, , , ;
+		조회일자, enddate, enddate, long, 4, 0, 0, 0, , , ;
+		매매구분, mgubun, mgubun, long, 4, 0, 0, 0, , , ;
+		종목코드, shtcode, shtcode, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		시간, basedate, basedate, varstring, 10, 0, 0, 0, , , ;
+		종목명, basetime, basetime, varstring, 8, 0, 0, 0, , , ;
+		매도상환, jongname, jongname, varstring, 30, 0, 0, 0, , , ;
+		매입가, meme, meme, varstring, 4, 0, 0, 0, , , ;
+		현재가, vol, vol, long, 4, 0, 0, 0, , , ;
+		수익률, price, price, long, 4, 0, 0, 0, , , ;
+		매수일당일구분, totmoney, totmoney, double, 8, 0, 0, 0, , , ;
+		매매손익, profit, profit, long, 4, 0, 0, 0, , , ;
+		매매손익률, rate, rate, float, 4, 0, 0, 0, , , ;
+		매수신호, mesusig, mesusig, varstring, 10, 0, 0, 0, , , ;
+		매도신호, medosig, medosig, varstring, 10, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		종목코드, shtcode, shtcode, varstring, 6, 0, 0, 0, , , ;
+		종목코드2, shtcode2, shtcode2, varstring, 6, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회일시, condate, condate, varstring, 14, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

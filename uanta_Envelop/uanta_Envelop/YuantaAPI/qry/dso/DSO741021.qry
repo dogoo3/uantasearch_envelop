@@ -1,0 +1,50 @@
+BEGIN_FUNCTION_MAP
+	.DSO,후강통_상승하락률상위,DSO741021,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20190911;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		시장구분, jang, jang, long, 4, 0, 122, 0, , , ;
+		상승하락구분, qrygbn, qrygbn, long, 4, 0, 142, 0, , , ;
+		요청데이터건수, readcount, readcount, long, 4, 0, 0, 0, , , ;
+		기준일자, basedate, basedate, varstring, 8, 0, 0, 0, , , ;
+		실시간지연시세여부, delay, delay, long, 4, 8, 122, 0, , , ;
+		언어구분, lang, lang, long, 4, 0, 141, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		다음유무, next, next, byte, 1, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		종목코드, code, code, varstring, 12, 0, 0, 0, , , ;
+		종목명, jname, jname, varstring, 40, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, float, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		햇빛안개, trend, trend, varstring, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		거래대금, money, money, double, 8, 0, 0, 0, , , ;
+		시가총액, sichong, sichong, double, 8, 0, 0, 0, , , ;
+		시가총액원화, sichong_kr, sichong_kr, double, 8, 0, 0, 0, , , ;
+		상승하락율, change_rate, change_rate, float, 4, 0, 0, 0, , , ;
+		상승하락폭, change, change, float, 4, 0, 0, 0, , , ;
+		5일평균거래량, avg_5, avg_5, double, 8, 0, 0, 0, , , ;
+		10일평균거래량, avg_10, avg_10, double, 8, 0, 0, 0, , , ;
+		20일평균거래량, avg_20, avg_20, double, 8, 0, 0, 0, , , ;
+		60일평균거래량, avg_60, avg_60, double, 8, 0, 0, 0, , , ;
+		전일저래량, prevvolume, prevvolume, double, 8, 0, 0, 0, , , ;
+		전일거래량대비율, volrate, volrate, float, 4, 0, 0, 0, , , ;
+		250일 고가, high250, high250, float, 4, 0, 0, 0, , , ;
+		코드, autocode, autocode, varstring, 12, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, float, 4, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, float, 4, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, float, 4, 0, 0, 0, , , ;
+		기준가, stdjuka, stdjuka, float, 4, 0, 0, 0, , , ;
+	end
+	NextBlock1, NextBlock1, nextflag;
+	begin
+		다음조회 종목코드, nextjongcode, nextjongcode, varstring, 12, 0, 0, 0, , , ;
+		다음조회 값, nextvalue, nextvalue, double, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -3,7 +3,7 @@ BEGIN_FUNCTION_MAP
 	BEGIN_DATA_MAP
 	InBlock1, InBlock1, input;
 	begin
-		해외선물코드, code, code, varstring, 32, 0, 0, 0, , , ;
+		해외선물코드, code, code, varstring, 32, 9, 0, 0, , , ;
 		요청건수, readcnt, readcnt, long, 4, 0, 0, 0, , , ;
 		기준시각, contime, contime, long, 4, 0, 0, 0, , , ;
 	end
