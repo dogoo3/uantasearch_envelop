@@ -42,7 +42,7 @@ namespace uanta_Envelop
 
             // 릴리즈 로그인
             m_iYuantaAPI.YOA_Initial("real.tradar.api.com", "");
-            m_iYuantaAPI.YOA_Login("dogoo3", "rhks12!@", "!rkqo1122dlk");
+            m_iYuantaAPI.YOA_Login("ID", "PW", "PW2");
 
             excelmanager = new ExcelManager();
             item = excelmanager.GetWorkSheet(Application.StartupPath + "\\KOSPI_KOSDAQ.xlsx");
