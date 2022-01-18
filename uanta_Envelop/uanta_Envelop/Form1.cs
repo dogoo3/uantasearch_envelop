@@ -38,7 +38,7 @@ namespace uanta_Envelop
 
             // 디버그 로그인
             //m_iYuantaAPI.YOA_Initial("real.tradar.api.com", Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\YuantaAPI");
-            //m_iYuantaAPI.YOA_Login("dogoo3", "rhks12!@", "!rkqo1122dlk");
+            //m_iYuantaAPI.YOA_Login("ID", "PW", "PW2");
 
             // 릴리즈 로그인
             m_iYuantaAPI.YOA_Initial("real.tradar.api.com", "");
